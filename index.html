@@ -32,25 +32,42 @@
   
   <main>
     <h1>Home</h1>
-    <section class="about-section">
-  
-      <div class="about-me">
+    <div class="two-columns">
+
+      <section class="about-me">
+        <h2>About Me</h2> 
         <p>massa lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
           dolore magna aliqua.</p>
-      </div>
-  
-      <div class="student-photo">
-        <h2>Student Photo</h2>
-        <div class="photo-placeholder"></div>
-      </div>
-    </section>
+      </section>
+
+      <section class="student-photo">
+        <h3>Student Photo</h3>
+        <div class="photo-placeholder">
+          Student photo here
+        </div>
+      </section>
+
+    </div>
 
     <section class="courses-section">
       <h2>Web Certification Courses</h2>
+
+      <div class="filter-buttons">
+        <button class="filter-button" data-filter="all">All</button>
+        <button class="filter-button" data-filter="cse">CSE</button>
+        <button class="filter-button" data-filter="wdd">WDD</button>
+      </div>
+
+      <div class="courses-list" id="coursesList">
+        <div class="course-item" data-category="wdd">WDD 130</div>
+        <div class="course-item" data-category="wdd">WDD 131</div>
+        <div class="course-item" data-category="wdd">WDD 231</div>
+      </div>
+
+      <p>The total credits for course listed above is <strong>6</strong></p>
     </section>
   </main>
 
-  </body>
   <footer>
     <p>© <span id="currentYear" class="modified"></span> | J. Toshio Holt | Texas, United States</p>
     <p>Last Modified: <span id="lastModified" class="modified"></span></p>
