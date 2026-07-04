@@ -13,3 +13,18 @@ body {
   line-height: 1.6;
   color: #374151;
 }
+
+header {
+  background-color: var(--primary);
+  color: white;
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
