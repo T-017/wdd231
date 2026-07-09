@@ -24,14 +24,15 @@
     <nav>
       <div class="nav-content">
         <div class="logo">Frontend Development Certification</div>
-      
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
+
+        <button id="menuButton" aria-expanded="false">☰</button>
+
+        <ul id="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="chamber-project.html">Chamber Project</a></li>
           <li><a href="final-project.html">Final Project</a></li>
         </ul>
       
-        <button class="menu-button" id="menuButton">☰</button>
       </div>
     </nav>
   </header>
@@ -40,39 +41,46 @@
     <h1>Home</h1>
     <div class="two-columns">
 
-      <section class="about-me">
-        <h2>About Me</h2> 
-        <p>massa lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua. massa lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          massa lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+      <section class="about-me" aria-labelledby="about-heading">
+        <h2 id="about-heading">About Me</h2>
+        <div class="about-content"> 
+          <p>
+            Hello. My name is J. Toshio Holt, and I am currently working towards a second Bachelor's degree, this time in Software Development.
+            I'm supposed to enter some information in this section abount myself, but I cant really think of anything to write, so I am just writing whatever comes to mind.
+            To fill up this empty space, I will write the chorus to a random song from my Spotify playlist, so here is "I Sent my Therapist To Therapy" by Alec Benjamin:
+            "I'll tell you what, I'm sorry, but I don't think I can be
+            Of any help, think I need help now" is what he said to me
+            Might even need it more than me now, oh, the irony
+            I'm so messed up, I sent my therapist to therapy
+            "I'll tell you what, I'm sorry, but I thought I'd never see
+            A case as bad as yours, don't think I have a remedy," mm
+            Think he needs help now, oh, the irony
+            I'm so messed up, I sent my therapist to therapy (therapy, therapy)
+          </p>
+        </div>
       </section>
 
-      <section class="student-photo">
-        <h3>Student Photo</h3>
+      <section class="about-me">
+        <h3 id="photo-heading">J. Toshio Holt</h3>
         <div class="photo-placeholder">
-          <img src="images/student-photo.jpg" alt="Student Photo">
+          <img src="images/student-photo.jpg" alt="J. Toshio Holt">
         </div>
       </section>
 
     </div>
 
     <section class="courses-section">
-      <h2>Web Certification Courses</h2>
+      <h2 id="courses-heading">Web Certification Courses</h2>
 
       <div class="filter-buttons">
-        <button class="filter-button" data-filter="all">All</button>
-        <button class="filter-button" data-filter="cse">CSE</button>
-        <button class="filter-button" data-filter="wdd">WDD</button>
+        <button class="filter-button active" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-button" data-filter="CSE" aria-pressed="false">CSE</button>
+        <button class="filter-button" data-filter="WDD" aria-pressed="false">WDD</button>
       </div>
 
-      <div class="courses-list" id="coursesList">
-        <div class="course-item" data-category="wdd">WDD 130</div>
-        <div class="course-item" data-category="wdd">WDD 131</div>
-        <div class="course-item" data-category="wdd">WDD 231</div>
-      </div>
+      <div id="course-list" class="course-list" aria-live="polite">
 
-      <p>The total credits for course listed above is <strong>6</strong></p>
+      <p id="total-credits" aria-live="polite"></p>
     </section>
   </main>
 

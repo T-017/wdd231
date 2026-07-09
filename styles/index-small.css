@@ -33,23 +33,23 @@ nav {
   font-weight: 700;
 }
 
-.nav-links {
+#nav-links {
   display: flex;
   gap: 2rem;
   list-style: none;
 }
 
-.nav-links a {
+#nav-links a {
   color: white;
   text-decoration: none;
   font-weight: 500;
 }
 
-.nav-links a:hover {
+#nav-links a:hover {
   text-decoration: underline;
 }
 
-.menu-button {
+#menuButton {
   display: none;
   font-size: 1.8rem;
   background: none;
@@ -77,19 +77,19 @@ h1 {
   margin-bottom: 3rem;
 }
 
-.about-me,
-.student-photo {
+.about-me {
   background-color: #f6f3f6;
   padding: 1.5rem;
   border-radius: 8px;
 }
 
-.student-photo h3 {
+.about-me h3, .about-me h2 {
   background-color: var(--primary);
   color: white;
   padding: 0.75rem 1rem;
   margin: -1.5rem -1.5rem 1.5rem -1.5rem;
   border-radius: 8px 8px 0 0;
+  text-align: center;
 }
 
 .photo-placeholder {
@@ -176,7 +176,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .nav-links {
+  #nav-links {
     display: none;
     flex-direction: column;
     background-color: #351f37;
@@ -188,11 +188,11 @@ footer {
     gap: 1rem;
   }
 
-  .nav-links.active {
+  #nav-links.active {
     display: flex;
   }
 
-  .menu-button {
+  #menuButton {
     display: block;
   }
 
