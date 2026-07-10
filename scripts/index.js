@@ -99,5 +99,28 @@ function renderCourses(filteredCourses) {
   });
 }
 
+let currentFilter = 'all';
+function filterCourses(filterType) {
+  currentFilter = filterType;
+
+  let filtered = courses;
+  if (filterType !== 'all') {
+    filtered = courses.filter(course => course.subject === filterType);
+  }
+
+  renderCourses(filtered);
+  updateTotalCredits(filtered);
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.classList.remove('active');
+    btn.setAttribute('aria-pressed', 'false');
+
+    if (btn.dataset.filter === filterType) {
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+    }
+  });
+}
+
 document.getElementById("currentYear").innerHTML = document.currentYear = new Date().getFullYear();
 document.getElementById("lastModified").innerHTML = document.lastModified;
