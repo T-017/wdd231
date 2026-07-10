@@ -99,28 +99,41 @@ function renderCourses(filteredCourses) {
   });
 }
 
-let currentFilter = 'all';
-function filterCourses(filterType) {
-  currentFilter = filterType;
+function updateCourseList(filter) {
+  const total = filteredCourses.reduce((accumulator, currentCourse) => {
+    return accumulator + currentCourse.credits;
+  }, 0);
 
-  let filtered = courses;
-  if (filterType !== 'all') {
-    filtered = courses.filter(course => course.subject === filterType);
-  }
-
-  renderCourses(filtered);
-  updateTotalCredits(filtered);
-
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.classList.remove('active');
-    btn.setAttribute('aria-pressed', 'false');
-
-    if (btn.dataset.filter === filterType) {
-      btn.classList.add('active');
-      btn.setAttribute('aria-pressed', 'true');
-    }
-  });
+  const totalCreditsElement = document.getElementById("total-credits");
+  totalCreditsElement.textContent = `Total credits for courses listed above: ${total}`;
 }
 
-document.getElementById("currentYear").innerHTML = document.currentYear = new Date().getFullYear();
-document.getElementById("lastModified").innerHTML = document.lastModified;
+let currentFilter = "all";
+function filterCourses(filterType) {
+  currentFilter = filterType;
+  
+  let filteredCourses = courses;
+
+  if (filterType !== "all") {
+    filteredCourses = courses.filter(course => course.subject === filterType);
+  }
+  
+  renderCourses(filteredCourses);
+  updateCourseList(filteredCourses);
+
+  document.querySelectorAll(".filter-button").forEach(button => {
+    button.classList.remove("active");
+    button.setAttribute("aria-pressed", "false");
+
+    if (button.dataset.filter === filterType) {
+      button.classList.add("active");
+      button.setAttribute("aria-pressed", "true");
+    }
+  });
+
+}
+  
+
+
+// document.getElementById("currentYear").innerHTML = document.currentYear = new Date().getFullYear();
+// document.getElementById("lastModified").innerHTML = document.lastModified;
