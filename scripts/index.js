@@ -34,5 +34,43 @@ filterButtons.forEach(button => {
   button.setAttribute("aria-label", `Filter courses by ${button.textContent}`);
 })
 
+const courses = [
+  {
+    subject: "CSE",
+    number: 110,
+    title: "Programming Building Blocks",
+    credits: 3,
+    completed: true
+  },
+  {
+    subject: "CSE",
+    number: 111,
+    title: "Programming with Functions",
+    credits: 3,
+    completed: true
+  },
+  {
+    subject: "WDD",
+    number: 130,
+    title: "Web Fundamentals",
+    credits: 2,
+    completed: true
+  },
+  {
+    subject: "WDD",
+    number: 131,
+    title: "Web Frontend Development I",
+    credits: 2,
+    completed: true
+  },
+  {
+    subject: "WDD",
+    number: 231,
+    title: "Web Frontend Development II",
+    credits: 2,
+    completed: false
+  }
+]
+
 document.getElementById("currentYear").innerHTML = document.currentYear = new Date().getFullYear();
 document.getElementById("lastModified").innerHTML = document.lastModified;

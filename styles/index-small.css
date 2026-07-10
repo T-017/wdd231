@@ -93,7 +93,7 @@ h1 {
   color: var(--primary);
 }
 
-/*About and Photo*/
+/*About, Photo, and Courses*/
 .two-columns {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -101,7 +101,7 @@ h1 {
   margin-bottom: 2.5rem;
 }
 
-.about-me {
+.about-me, .courses-section {
   background-color: #f6f3f6;
   border-radius: 8px;
   overflow: hidden;
@@ -109,7 +109,7 @@ h1 {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.about-me h3, .about-me h2 {
+.about-me h3, .about-me h2, .courses-section h2 {
   background-color: var(--primary);
   color: white;
   border-radius: 8px;
@@ -139,59 +139,58 @@ h1 {
   }
 }
 
-/*Courses Section*/
-.courses-section {
-  margin-bottom: 1rem;
-}
-
-.courses-section h2 {
-  background-color: var(--primary);
-  color: white;
-  padding: 0.75rem 1rem;
-  margin-bottom: 1rem;
-  border-radius: 6px;
-}
-
+/*Courses Filter Section*/
 .filter-buttons {
   display: flex;
   gap: 1rem;
-  margin-bottom: 1.5rem;
   flex-wrap: wrap;
 }
 
 .filter-button {
   padding: 0.6rem 1.4rem;
-  border: 2px solid #4e3751;
+  border: 2px solid var(--primary);
   background: white;
-  color: #4e3751;
-  border-radius: 6px;
+  color: var(--primary);
+  border-radius: 8px;
   cursor: pointer;
-  font-weight: 600;
-  transition: all 0.2s;
+  font-size: 0.9rem;
 }
 
 .filter-button.active,
 .filter-button:hover {
   background-color: var(--primary);
+  border-color: var(--primary);
   color: white;
 }
 
 .courses-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  padding: 1rem 1.25rem;
+  background-color: #f6f3f6;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .course-item {
-  background-color: #ebe5eb;
-  padding: 1rem 1rem;
-  margin-bottom: 0.75rem;
-  border-radius: 6px;
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/*Script Course Array*/
+.course-title {
+  flex: 1;
+  color: var(--primary);
+}
+
+/*Footer*/
 footer {
-  background-color: #f6f3f6;
+  background-color: var(--secondary);
   padding: 2rem;
   text-align: center;
   font-size: 0.9rem;
@@ -206,7 +205,7 @@ footer {
 }
 
 .social-links a {
-  color: #4e3751;
+  color: var(--primary);
   text-decoration: none;
 }
 
