@@ -70,7 +70,34 @@ const courses = [
     credits: 2,
     completed: false
   }
-]
+];
+
+function renderCourses(filteredCourses) {
+  const container = document.getElementById("course-list");
+  container.innerHTML = "";
+
+  if (filteredCourses.length === 0) { 
+    container.innerHTML = "<p>No courses found.</p>";
+    return;
+  }
+
+  filteredCourses.forEach(course => { 
+    const item = document.createElement("div");
+    item.className = `course-item${course.completed ? " completed" : ""}`;
+    
+    let badgeHTML = "";
+    if (course.completed) {
+      badgeHTML = `<span class="badge completed">Completed</span>`;
+    }
+    item.innerHTML = `
+        <span class="course-code">${course.subject} ${course.number}</span>
+        <span class="course-title">${course.title}</span>
+        <span class="course-credits">${course.credits} credits</span>
+        ${badgeHTML}
+      `;
+    container.appendChild(item);
+  });
+}
 
 document.getElementById("currentYear").innerHTML = document.currentYear = new Date().getFullYear();
 document.getElementById("lastModified").innerHTML = document.lastModified;

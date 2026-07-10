@@ -43,9 +43,10 @@ nav {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
   letter-spacing: 1px;
+  padding: 0.5rem 0;
 }
 
 #nav-links {
@@ -88,8 +89,8 @@ main {
 }
 
 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
   color: var(--primary);
 }
 
@@ -112,6 +113,7 @@ h1 {
 .about-me h3, .about-me h2, .courses-section h2 {
   background-color: var(--primary);
   color: white;
+  text-align: center;
   border-radius: 8px;
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
