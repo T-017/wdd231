@@ -9,8 +9,15 @@
   box-sizing: border-box;
 }
 
+.roboto-slab {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
-  font-family: system-ui, "Segoe UI", sans-serif;
+  font-family: "Roboto Slab", serif;
   line-height: 1.6;
   color: var(--primary);
   background-color: #f9fff8;
