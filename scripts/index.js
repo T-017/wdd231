@@ -171,5 +171,27 @@ function initializePage() {
     menuButton.textContent = isOpen ? "✖" : "☰";
   });
 
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      if (navLinks.classList.contains("open")) {
+        navLinks.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.textContent = "☰";
+      }
+    });
+  });
+
+  menuButton.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      menuButton.click();
+    }
+  });
+
+  console.log("Page initialized successfully.");
+}
+
+window.onload = initializePage;
+
 // document.getElementById("currentYear").innerHTML = document.currentYear = new Date().getFullYear();
 // document.getElementById("lastModified").innerHTML = document.lastModified;
