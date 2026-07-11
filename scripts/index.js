@@ -63,16 +63,17 @@ function renderCourses(filteredCourses) {
   });
 }
 
-function updateCourseList(filter) {
+function updateTotalCredits(filteredCourses) {
   const total = filteredCourses.reduce((accumulator, currentCourse) => {
     return accumulator + currentCourse.credits;
   }, 0);
 
   const totalCreditsElement = document.getElementById("total-credits");
-  totalCreditsElement.textContent = `Total credits for courses listed above: ${total}`;
+  totalCreditsElement.textContent = `Total credit for courses listed above: ${total}`;
 }
 
 let currentFilter = "all";
+
 function filterCourses(filterType) {
   currentFilter = filterType;
   
@@ -83,7 +84,7 @@ function filterCourses(filterType) {
   }
   
   renderCourses(filteredCourses);
-  updateCourseList(filteredCourses);
+  updateTotalCredits(filteredCourses);
 
   document.querySelectorAll(".filter-button").forEach(button => {
     button.classList.remove("active");
@@ -119,14 +120,15 @@ function initializePage() {
 
   const filterButtons = document.querySelectorAll(".filter-button");
   filterButtons.forEach(button => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (event) => {
       const filterType = button.dataset.filter;
       filterCourses(filterType);
     });
   });
 
+  // Menu toggle function
   const menuButton = document.getElementById("menuButton");
-  const navLinks = document.getElementById("navLinks");
+  const navLinks = document.getElementById("nav-links");
 
   menuButton.addEventListener("click", () => {
     const isOpen = navLinks.classList.toggle("open");
@@ -134,8 +136,8 @@ function initializePage() {
     menuButton.textContent = isOpen ? "✖" : "☰";
   });
 
-  navLinks.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
+  navLinks.querySelectorAll("a").forEach(navLink => {
+    navLink.addEventListener("click", () => {
       if (navLinks.classList.contains("open")) {
         navLinks.classList.remove("open");
         menuButton.setAttribute("aria-expanded", "false");
@@ -143,15 +145,6 @@ function initializePage() {
       }
     });
   });
-
-  menuButton.addEventListener("keydown", (event) => {
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      menuButton.click();
-    }
-  });
-
-  console.log("Page initialized successfully.");
 }
 
 window.onload = initializePage;
