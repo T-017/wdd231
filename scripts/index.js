@@ -133,7 +133,43 @@ function filterCourses(filterType) {
 
 }
   
+function initializePage() {
+  const currentYearElement = document.getElementById("currentYear");
+  currentYearElement.textContent = new Date().getFullYear();
 
+  const lastModifiedElement = document.getElementById("lastModified");
+  const lastModifiedDate = new Date(document.lastModified);
+
+  const formattedDate = lastModifiedDate.toLocaleDateString("en-US", {
+    month: "2-digit",
+    day: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false
+  }).replace(/,/, "");
+
+  lastModifiedElement.textContent = formattedDate;
+
+  filterCourses("all");
+
+  const filterButtons = document.querySelectorAll(".filter-button");
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const filterType = button.dataset.filter;
+      filterCourses(filterType);
+    });
+  });
+
+  const menuButton = document.getElementById("menuButton");
+  const navLinks = document.getElementById("navLinks");
+
+  menuButton.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", isOpen);
+    menuButton.textContent = isOpen ? "✖" : "☰";
+  });
 
 // document.getElementById("currentYear").innerHTML = document.currentYear = new Date().getFullYear();
 // document.getElementById("lastModified").innerHTML = document.lastModified;
