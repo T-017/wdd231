@@ -4,10 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Homepage - J. Toshio Holt">
-  <meta property="og:description" content="WDD 231 - Web Frontend Development - J. Toshio Holt's homepage for the Web Development Certification program at BYU Pathway.">
+  <title>Anna Chamber of Commerce - Directory</title>
+  <meta property="og:title" content="Anna Chamber of Commerce - Directory">
+  <meta property="og:description" content="Discover member businesses both old and new in the historic and quickly developing city of Anna, Texas. Browse our directory for more information what Anna has to offer.">
+  <meta property="og:image" content="https://t-017.github.io/wdd231/chamber/images/anna.jpg">
   <meta property="og:url" content="https://t-017.github.io/wdd231/chamber/directory.html">
-  <meta property="og:image" content="https://t-017.github.io/wdd231/chamber/images/student-photo.jpg">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="styles/chamber-small.css">
   <link rel="stylesheet" href="styles/chamber-medium.css">
   <link rel="stylesheet" href="styles/chamber-large.css">
@@ -16,38 +18,53 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
   <script src="scripts/chamber.js" defer></script>
-  <title>WDD 231 - Web Frontend Development - J. Toshio Holt</title>
-  <meta name="description" content="WDD 231 - Web Frontend Development - J. Toshio Holt's homepage for the Web Development Certification program at BYU Pathway.">
+  <meta name="description" content="Discover member businesses both old and new in the historic and quickly developing city of Anna, Texas. Browse our directory for more information what Anna has to offer.">
+  <meta name="keywords" content="Anna, Chamber of Commerce, business directory, Texas, tourism, local businesses">
   <meta name="author" content="J. Toshio Holt">
-  <meta name="keywords" content="WDD 231, Web Frontend Development, J. Toshio Holt, BYU Pathway, Web Development Certification">
 </head>
 
 <body>
   <header>
     <nav>
-      <div class="logo">Frontend Development Certification</div>
+      <div class="logo">Anna Chamber of Commerce</div>
 
       <button id="menuButton" aria-expanded="false">☰</button>
 
       <ul id="nav-links">
-        <li><a href="chamber.html">Chamber</a></li>
-        <li><a href="directory.html">Directory</a></li>
+        <li><a href="chamber.html">Home</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
         <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
+    <h1>Directory</h1>
+    <div class="toggle-buttons">
+      <button id="grid-button">Grid</button>
+      <button id="list-button">List</button>
+    </div>
 
+    <div id="member-card" class="grid-view"></div>
   </main>
 
   <footer>
     <div class="footer-content">
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/jack-toshio-holt/" aria-label="LinkedIn">LinkedIn</a>
-        <a href="https://github.com/T-017" aria-label="GitHub">GitHub</a>
-        <a href="https://www.youtube.com/@jacktoshioholt/featured" aria-label="YouTube">YouTube</a>
+      <div class="footer-contact">
+        <p><strong>Anna Chamber of Commerce</strong></p>
+        <p>123 Main Street</p>
+        <p>Anna, TX 75409</p>
+        <p>info@annachamber.com</p>
+        <p>(123) 456-7890</p>
       </div>
+
+      <div class="social-links">
+        <a href="https://www.youtube.com/@jacktoshioholt/featured" aria-label="YouTube">YouTube</a>
+        <a href="https://twitter.com/anna_chamber" aria-label="Twitter">Twitter</a>
+        <a href="https://www.linkedin.com/in/jack-toshio-holt/" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+
       <p>© <span id="currentYear"></span> | J. Toshio Holt | Texas, United States</p>
       <p>Last Modified: <span id="lastModified"></span></p>
     </div>
