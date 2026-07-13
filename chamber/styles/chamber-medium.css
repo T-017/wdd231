@@ -1,0 +1,22 @@
+@media (min-width: 1200px) and (max-width: 2499px) {
+  #menuButton {
+    display: none;
+  }
+
+  #navLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
+
+  #navLinks.open {
+    display: flex;
+  }
+
+  img {
+    max-width: 100%;
+    width: 600px;
+    height: 500px;
+  }
+}
