@@ -1,0 +1,243 @@
+:root {
+  --primary-color: #412863;
+  --accent: #6b6b6b;
+  --light-bg: #e9e9e9;
+  --card-bg: #FFFFFF;
+  --text-color: #412c50;
+  --light-gray: #E9ECEF;
+  --border-color: #e2dee6;
+  --success-green: #28A745;
+}
+
+/* Body */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-bg);
+}
+
+
+/* Header and Navigation */
+header {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 0.5rem 0;
+}
+
+#nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+#nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#nav-links a:hover {
+  color: gold;
+}
+
+#nav-links.active {
+  font-weight: 700;
+}
+
+#menuButton {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  line-height: 1;
+}
+
+/* Main */
+main {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+/* Toggle */
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.toggle-buttons button {
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.toggle-buttons button.active {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+}
+
+/* Member Grid */
+#member-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.member-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.member-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.member-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.member-info {
+  padding: 0.5rem 0;
+}
+
+.member-info h3 {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin: 0.5rem 0;
+}
+
+.member-info .tagline {
+  font-size: 1rem;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+.member-info p {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.member-info a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.member-info a:hover {
+  color: gold;
+}
+
+/* Member List */
+#member-card.list-view {
+  display: block;
+}
+
+#member-card.list-view .member-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  max-width: 100%;
+}
+
+#member-card.list-view .member-card img {
+  display: none;
+}
+
+#member-card.list-view .member-info {
+  padding: 1rem;
+}
+
+#member-card.list-view .member-info h3 {
+  font-size: 1.75rem;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.footer-content p {
+  margin: 0.75rem 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0.75rem 0;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: gold;
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 0.75rem 1rem;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+}
