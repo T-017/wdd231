@@ -5,6 +5,7 @@
     "phone": "(555) 123-4567",
     "email": "something.something@example.com",
     "image": "https://via.placeholder.com/150",
+    "membership": 3,
     "website": "https://www.example.com",
     "tagline": "A brief description of the business and its services."
   },
@@ -13,6 +14,27 @@
     "address": "123 Main St, Anytown, USA",
     "phone": "(555) 123-4567",
     "email": "something.something@example.com",
+    "image": "https://via.placeholder.com/150",
+    "membership": 2,
+    "website": "https://www.example.com",
+    "tagline": "A brief description of the business and its services."
+  },
+  {
+    "name": "Business Name",
+    "address": "123 Main St, Anytown, USA",
+    "phone": "(555) 123-4567",
+    "email": "something.something@example.com",
+    "image": "https://via.placeholder.com/150",
+    "membership": 1,
+    "website": "https://www.example.com",
+    "tagline": "A brief description of the business and its services."
+  },
+  {
+    "name": "Business Name",
+    "address": "123 Main St, Anytown, USA",
+    "phone": "(555) 123-4567",
+    "email": "something.something@example.com",
+    "membership": 3,
     "image": "https://via.placeholder.com/150",
     "website": "https://www.example.com",
     "tagline": "A brief description of the business and its services."
@@ -23,6 +45,7 @@
     "phone": "(555) 123-4567",
     "email": "something.something@example.com",
     "image": "https://via.placeholder.com/150",
+    "membership": 2,
     "website": "https://www.example.com",
     "tagline": "A brief description of the business and its services."
   },
@@ -32,6 +55,7 @@
     "phone": "(555) 123-4567",
     "email": "something.something@example.com",
     "image": "https://via.placeholder.com/150",
+    "membership": 2,
     "website": "https://www.example.com",
     "tagline": "A brief description of the business and its services."
   },
@@ -41,24 +65,7 @@
     "phone": "(555) 123-4567",
     "email": "something.something@example.com",
     "image": "https://via.placeholder.com/150",
-    "website": "https://www.example.com",
-    "tagline": "A brief description of the business and its services."
-  },
-  {
-    "name": "Business Name",
-    "address": "123 Main St, Anytown, USA",
-    "phone": "(555) 123-4567",
-    "email": "something.something@example.com",
-    "image": "https://via.placeholder.com/150",
-    "website": "https://www.example.com",
-    "tagline": "A brief description of the business and its services."
-  },
-  {
-    "name": "Business Name",
-    "address": "123 Main St, Anytown, USA",
-    "phone": "(555) 123-4567",
-    "email": "something.something@example.com",
-    "image": "https://via.placeholder.com/150",
+    "membership": 3,
     "website": "https://www.example.com",
     "tagline": "A brief description of the business and its services."
   }

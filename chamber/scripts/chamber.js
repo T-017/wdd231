@@ -24,11 +24,25 @@ function displayMembers(viewType) {
     const card = document.createElement('div');
     card.className = 'member-card';
 
+    let membershipClass = '';
+    let membershipText = '';
+    if (member.membership === 3) {
+      membershipClass = 'gold';
+      membershipText = 'Gold Member';
+    } else if (member.membership === 2) {
+      membershipClass = 'silver';
+      membershipText = 'Silver Member';
+    } else {
+      membershipClass = 'member';
+      membershipText = 'Member';
+    }
+
     if (viewType === 'grid') {
       //Grid with images
       card.innerHTML = `
         <img src="${member.image}" alt="${member.name} logo" loading="lazy">
         <div class="member-info">
+          <span class="membership-badge ${membershipClass}">${membershipText}</span>
           <h3>${member.name}</h3>
           <p class="tagline">${member.tagline}</p>
           <p><strong>EMAIL:</strong> ${member.email}</p>
@@ -41,6 +55,7 @@ function displayMembers(viewType) {
       // List without images
       card.innerHTML = `
         <div class="member-info">
+          <span class="membership-badge ${membershipClass}">${membershipText}</span>
           <h3>${member.name}</h3>
           <p class="tagline">${member.tagline}</p>
           <p><strong>EMAIL:</strong> ${member.email}</p>
@@ -86,7 +101,7 @@ function setupMenuToggle() {
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('show');
-        menubutton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-expanded', 'false');
       });
     });
   }
@@ -128,46 +143,3 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 console.log('Chamber directory script loaded successfully.');
-
-
-// function initializePage() {
-//   const currentYearElement = document.getElementById("currentYear");
-//   currentYearElement.textContent = new Date().getFullYear();
-
-//   const lastModifiedElement = document.getElementById("lastModified");
-//   const lastModifiedDate = new Date(document.lastModified);
-
-//   const formattedDate = lastModifiedDate.toLocaleDateString("en-US", {
-//     month: "2-digit",
-//     day: "2-digit",
-//     year: "numeric",
-//     hour: "2-digit",
-//     minute: "2-digit",
-//     second: "2-digit",
-//     hour12: false
-//   }).replace(/,/, "");
-
-//   lastModifiedElement.textContent = formattedDate;
-
-//   // Menu toggle function
-//   const menuButton = document.getElementById("menuButton");
-//   const navLinks = document.getElementById("nav-links");
-
-//   menuButton.addEventListener("click", () => {
-//     const isOpen = navLinks.classList.toggle("open");
-//     menuButton.setAttribute("aria-expanded", isOpen);
-//     menuButton.textContent = isOpen ? "✖" : "☰";
-//   });
-
-//   navLinks.querySelectorAll("a").forEach(navLink => {
-//     navLink.addEventListener("click", () => {
-//       if (navLinks.classList.contains("open")) {
-//         navLinks.classList.remove("open");
-//         menuButton.setAttribute("aria-expanded", "false");
-//         menuButton.textContent = "☰";
-//       }
-//     });
-//   });
-// }
-
-// window.onload = initializePage;
