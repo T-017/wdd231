@@ -73,7 +73,6 @@ function displayMembers(viewType) {
 }
 
 // Weather API Integration
-
 const weatherapiKey = '4eb3ceb7dc6736a73d8e419d0dafb32c';
 const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=49.75&lon=6.64&units=imperial&appid=${weatherapiKey}`;
 
@@ -102,6 +101,40 @@ function displayWeather(data) {
       <p>${desc}</p>
     </div>
   `;
+}
+
+// Spotlight Feature
+async function loadMemberSpotlights() {
+  try {
+    const response = await fetch('data/members.json');
+    if (response.ok) {
+      membersData = await response.json();
+      displaySpotlights();
+    }
+  } catch (error) {
+    console.error('Error loading member spotlights:', error);
+  }
+}
+
+function getSpotlights() {
+  const premium = membersData.filter(m => m.membership >= 2);
+  const shuffled = [...premium].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, 3);
+}
+
+function displaySpotlights() {
+  const container = document.getElementById('spotlight-container');
+  const spotlights = getSpotlights();
+
+  container.innerHTML = spotlights.map(member => `
+    <div class="spotlight-card">
+      <img src="${member.image}" alt="${member.name}">
+      <h3>${member.name}</h3>
+      <p>${member.tagline}</p>
+      <p><strong>${member.email}</strong></p>
+      <a href="${member.website}" target="_blank">Visit Website</a>
+    </div>
+  `).join('');
 }
 
 // Grid and List View Toggle
@@ -170,9 +203,31 @@ function updateFooterInfo() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  const menuButton = document.getElementById('menuButton');
+  const navLinks = document.getElementById('nav-links');
+  if (menuButton && navLinks) {
+    menuButton.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  }
+
+  const yearElement = document.getElementById('currentYear');
+  if (yearElement) yearElement.textContent = new Date().getFullYear();
+
+  const lastModifiedElement = document.getElementById('lastModified');
+  if (lastModifiedElement) {
+    const lastModifiedDate = new Date(document.lastModified);
+    const formattedDate = lastModifiedDate.toLocaleDateString('en-US') + ' ' + lastModifiedDate.toLocaleTimeString('en-US', { hour12: false });
+    lastModifiedElement.textContent = formattedDate;
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
   fetchMembers();
   setupToggleButtons();
   setupMenuToggle();
+  fetchweather();
+  loadMemberSpotlights();
   updateFooterInfo();
 
   const gridButton = document.getElementById('grid-button');
