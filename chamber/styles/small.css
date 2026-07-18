@@ -1,6 +1,6 @@
 :root {
   --primary-color: #412863;
-  --accent: #6b6b6b;
+  --accent: #7e7e7e;
   --light-bg: #e9e9e9;
   --card-bg: #FFFFFF;
   --text-color: #412c50;
@@ -15,7 +15,6 @@ body {
   padding: 0;
   background-color: var(--light-bg);
 }
-
 
 /* Header and Navigation */
 header {
@@ -233,9 +232,18 @@ h1 {
   margin-bottom: 1rem;
 }
 
+.hero img {
+  max-width: 95%;
+  height: 100%;
+  background-color: var(--accent);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
 .hero-content p {
   font-size: 1.25rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .cta-button {
