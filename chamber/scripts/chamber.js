@@ -72,9 +72,9 @@ function displayMembers(viewType) {
   });
 }
 
-// Weather API Integration
+// Weather API Integration (OpenWeatherMap)
 const weatherApiKey = '4eb3ceb7dc6736a73d8e419d0dafb32c';
-const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=49.75&lon=6.64&units=imperial&appid=${weatherApiKey}`;
+const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&units=imperial&appid=${weatherApiKey}`;
 
 async function apiFetch() {
   try {
@@ -95,7 +95,7 @@ function displayWeather(data) {
   const iconSrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
 
   container.innerHTML = `
-    <div class="weather-info">
+    <div class="weather-data">
       <h3>${temp}°F</h3>
       <img src="${iconSrc}" alt="${desc} icon">
       <p>${desc}</p>
