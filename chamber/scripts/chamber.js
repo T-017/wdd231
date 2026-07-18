@@ -1,5 +1,6 @@
 let membersData = [];
 
+// Member Data Fetching
 async function fetchMembers() {
   try {
     const response = await fetch('data/members.json');
@@ -15,6 +16,7 @@ async function fetchMembers() {
   }
 }
 
+// Member Display Function
 function displayMembers(viewType) {
   const container = document.getElementById('member-card');
   container.innerHTML = '';
@@ -70,6 +72,39 @@ function displayMembers(viewType) {
   });
 }
 
+// Weather API Integration
+
+const weatherapiKey = '4eb3ceb7dc6736a73d8e419d0dafb32c';
+const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=49.75&lon=6.64&units=imperial&appid=${weatherapiKey}`;
+
+async function apiFetch() {
+  try {
+    const response = await fetch(weatherUrl);
+    if (response.ok) {
+      const data = await response.json();
+      displayWeather(data);
+    }
+  } catch (error) {
+    console.error('Error fetching weather data:', error);
+  }
+}
+
+function displayWeather(data) {
+  const container = document.getElementById('weather-data');
+  const temp = Math.round(data.main.temp);
+  const desc = data.weather[0].description;
+  const iconSrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+
+  container.innerHTML = `
+    <div class="weather-info">
+      <h3>${temp}°F</h3>
+      <img src="${iconSrc}" alt="${desc} icon">
+      <p>${desc}</p>
+    </div>
+  `;
+}
+
+// Grid and List View Toggle
 function setupToggleButtons() {
   const gridButton = document.getElementById('grid-button');
   const listButton = document.getElementById('list-button');
@@ -87,6 +122,7 @@ function setupToggleButtons() {
   });
 }
 
+// Menu Toggle for Mobile View
 function setupMenuToggle() {
   const menuButton = document.getElementById('menuButton');
   const navLinks = document.getElementById('nav-links');
@@ -107,6 +143,7 @@ function setupMenuToggle() {
   }
 }
 
+// Footer Information Update
 function updateFooterInfo() {
   const currentYearElement = document.getElementById('currentYear');
   if (currentYearElement) {
