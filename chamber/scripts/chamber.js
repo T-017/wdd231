@@ -73,8 +73,8 @@ function displayMembers(viewType) {
 }
 
 // Weather API Integration
-const weatherapiKey = '4eb3ceb7dc6736a73d8e419d0dafb32c';
-const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=49.75&lon=6.64&units=imperial&appid=${weatherapiKey}`;
+const weatherApiKey = '4eb3ceb7dc6736a73d8e419d0dafb32c';
+const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=49.75&lon=6.64&units=imperial&appid=${weatherApiKey}`;
 
 async function apiFetch() {
   try {
