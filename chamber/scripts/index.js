@@ -95,7 +95,7 @@ function displayWeather(data) {
   const iconSrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
 
   container.innerHTML = `
-    <div class="weather-data">
+    <div class="weather-card">
       <h3>${temp}°F</h3>
       <img src="${iconSrc}" alt="${desc} icon">
       <p>${desc}</p>
@@ -127,7 +127,7 @@ function displaySpotlights() {
   const spotlights = getSpotlights();
 
   container.innerHTML = spotlights.map(member => `
-    <div class="spotlight-card">
+    <div class="spotlight-grid">
       <img src="${member.image}" alt="${member.name}">
       <h3>${member.name}</h3>
       <p>${member.tagline}</p>

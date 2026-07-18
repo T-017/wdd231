@@ -252,11 +252,12 @@ h1 {
   color: var(--primary-color);
 }
 
+/* Events and Weather */
 .events, .weather, .spotlights {
   margin-bottom: 2rem;
 }
 
-.event-card, .weather-data {
+.event-card, .weather-card, .spotlight-card {
   background-color: var(--card-bg);
   border-radius: 8px;
   padding: 1rem;
