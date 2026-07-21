@@ -74,7 +74,7 @@ function displayMembers(viewType) {
 
 // Weather API Integration (OpenWeatherMap)
 const weatherApiKey = '4eb3ceb7dc6736a73d8e419d0dafb32c';
-const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&units=imperial&appid=${weatherApiKey}`;
+const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=33.347263&lon=-96.550297&units=imperial&appid=${weatherApiKey}`;
 
 async function apiFetch() {
   try {
@@ -82,6 +82,7 @@ async function apiFetch() {
     if (response.ok) {
       const data = await response.json();
       displayWeather(data);
+      console.log('Weather data fetched successfully:', data);
     }
   } catch (error) {
     console.error('Error fetching weather data:', error);
@@ -119,7 +120,7 @@ async function loadMemberSpotlights() {
 function getSpotlights() {
   const premium = membersData.filter(m => m.membership >= 2);
   const shuffled = [...premium].sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, 3);
+  return shuffled.slice(0, 2);
 }
 
 function displaySpotlights() {
@@ -223,11 +224,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+  loadMemberSpotlights();
   fetchMembers();
+  apiFetch();
   setupToggleButtons();
   setupMenuToggle();
   fetchweather();
-  loadMemberSpotlights();
   updateFooterInfo();
 
   const gridButton = document.getElementById('grid-button');
