@@ -3,6 +3,9 @@ const courses = [
     subject: "CSE",
     number: 110,
     title: "Programming Building Blocks",
+    description: "An introduction to programming building blocks.",
+    certificate: "Available",
+    technology: ["Python"],
     credits: 3,
     completed: true
   },
@@ -10,6 +13,9 @@ const courses = [
     subject: "CSE",
     number: 111,
     title: "Programming with Functions",
+    description: "An introduction to programming with functions.",
+    certificate: "Available",
+    technology: ["Python"],
     credits: 3,
     completed: true
   },
@@ -17,6 +23,9 @@ const courses = [
     subject: "WDD",
     number: 130,
     title: "Web Fundamentals",
+    description: "An introduction to web fundamentals.",
+    certificate: "Available",
+    technology: ["HTML", "CSS", "JavaScript"],
     credits: 2,
     completed: true
   },
@@ -24,6 +33,9 @@ const courses = [
     subject: "WDD",
     number: 131,
     title: "Web Frontend Development I",
+    description: "An introduction to web frontend development.",
+    certificate: "Available",
+    technology: ["HTML", "CSS", "JavaScript"],
     credits: 2,
     completed: true
   },
@@ -31,6 +43,9 @@ const courses = [
     subject: "WDD",
     number: 231,
     title: "Web Frontend Development II",
+    description: "An introduction to web frontend development II.",
+    certificate: "Available",
+    technology: ["HTML", "CSS", "JavaScript"],
     credits: 2,
     completed: false
   }
@@ -59,7 +74,12 @@ function renderCourses(filteredCourses) {
         <span class="course-credits">${course.credits} credits</span>
         ${badgeHTML}
       `;
+    
     container.appendChild(item);
+
+    item.addEventListener("click", () => {
+      displayCourseDetails(course);
+    });
   });
 }
 
@@ -97,32 +117,32 @@ function filterCourses(filterType) {
   });
 }
 
+// Course Details
+const courseDetails = document.querySelector("#course-details");
 
-function displayCourseDetails(courses) {
-  const courseDetails = document.getElementById("course-details");
-  const closeModal = document.getElementById("closeModal");
-
-  courseDetails.innerHTML = '';
+function displayCourseDetails(course) {
   courseDetails.innerHTML = `
     <button id="closeModal">✖</button>
-    <h2>${courses.subject} ${courses.number}</h2>
-    <h3>${courses.title}</h3>
-    <p><strong>Credits</strong>: ${courses.credits}</p>
-    <p><strong>Certificate</strong>: ${courses.certificate}</p>
-    <p>${courses.description}</p>
-    <p><strong>Technologies</strong>: ${courses.technology.join(', ')}</p>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
   `;
+
   courseDetails.showModal();
 
-  const closeModalButton = document.getElementById("closeModal");
-  closeModalButton.addEventListener("click", () => {
+  document.querySelector("#closeModal").addEventListener("click", () => {
     courseDetails.close();
   });
-
-  courseDiv.addEventListener("click", () => {
-    displayCourseDetails(course);
-  });
 }
+
+courseDetails.addEventListener("click", (event) => {
+  if (event.target === courseDetails) {
+    courseDetails.close();
+  }
+});
   
 function initializePage() {
   const currentYearElement = document.getElementById("currentYear");

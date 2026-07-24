@@ -106,41 +106,51 @@ h1 {
 
 dialog {
   border: 1px solid var(--primary);
+  background-color: var(--secondary);
   border-radius: 8px;
   padding: 1.5rem;
   max-width: 600px;
   width: 90%;
-  background-color: white;
+  background-color: var(--secondary);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: 81% auto;
 }
 
 ::backdrop {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-dialog button {
-  background-color: var(--primary);
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 4px;
-  margin-top: 1rem;
-}
-
-.closeModal {
+dialog button#closeModal {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
+  top: 1rem;
+  right: 1rem;
+  background: var(--primary);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: white;
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
   cursor: pointer;
+  font-size: 0.9rem;
 }
 
-#courseDetails {
-  margin-top: 1rem;
-  font-size: 1rem;
+dialog button#closeModal:hover {
+  background-color: #4f2c53;
+}
+
+dialog h2 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+dialog h3 {
+  margin: 0.5rem 0;
+  color: var(--primary);
+}
+
+dialog p {
+  color: var(--primary);
+  margin: 0.5rem 0;
   line-height: 1.5;
 }
 
