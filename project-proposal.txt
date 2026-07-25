@@ -1,0 +1,21 @@
+Week 4 Project Proposal
+
+Project Subject
+- Traveling to and learning about Japan
+
+Project Description
+The site will provide information such as:
+- Site links to travel agencies
+- Popular tourist destinations providing map locations (with real time weather updates)
+- Recomeended hotel accomodations
+- Transportation methods with instructions
+- Information request form and subscription to site news and updates
+- A thank you page for submitting a request form
+- A brief introduction to cultural norms in Japan
+
+Project Reason and Purpose
+- I am half Japanese and would like to learn more about my culture while also preparing to visit, as my wife if Japanese and would like to take me there some day
+- My wife also points out the common issues that Japanese people have with tourist and their cultural insensitivity
+- This subject is both interesting and relavent to me, hence the reason why I chose it as the subject
+- To educate travelers about the culture of Japan that goes beyond main stream pop culture 
+- Also to provide tourist with general travel information
