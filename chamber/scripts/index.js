@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
   apiFetch();
   setupToggleButtons();
   setupMenuToggle();
-  fetchweather();
+  apiFetch();
   updateFooterInfo();
 
   const gridButton = document.getElementById('grid-button');

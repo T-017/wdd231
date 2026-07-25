@@ -40,7 +40,154 @@
   </header>
 
   <main>
+    <h1>Join the Anna Chamber of Commerce</h1>
+    <p class="join-intro">Thank you for your interest in joining the Anna Chamber of Commerce! By becoming a member, you'll be part of a thriving community that supports local businesses and fosters growth in Anna, Texas.</p>
 
+    <div class="join-layout">
+      <!-- Membership Form -->
+      <form method="get" action="thank-you.html" class="join-form">
+        <fieldset>
+          <legend>Membership Information</legend>
+
+          <label for="fname">First Name*
+            <input type="text" id="fname" name="fname" required
+            title="Please enter your first name" autocomplete="given-name">
+          </label>
+
+          <label for="lname">Last Name*
+            <input type="text" id="lname" name="lname" required
+            title="Please enter your last name" autocomplete="family-name">
+          </label>
+
+          <label for="title">Organizational Title
+            <input type="text" id="title" name="title"
+            title="Your title within the organization (letters, hyphens, and spaces only, minimum 7 characters)" autocomplete="organization-title"
+            pattern="[A-Za-z\s\-]{7,}" placeholder="Marketing Director">
+          </label>
+
+          <label for="email">Email Address*
+            <input type="email" id="email" name="email" required
+            title="Please enter a valid email address" autocomplete="email"
+            placeholder="name@example.com">
+          </label>
+
+          <label for="phone">Phone Number*
+            <input type="tel" id="phone" name="phone" required
+            title="Please enter your phone number" autocomplete="tel"
+            placeholder="(123) 456-7890">
+          </label>
+
+          <label for="org">Business/Organization Name*
+            <input type="text" id="org" name="org" required
+            title="Please enter the name of your business or organization" autocomplete="organization"
+            placeholder="Example Business Inc.">
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Membership Level</legend>
+          <label for="membership">Choose your membership level*
+            <select id="membership" name="membership" required
+            title="Please select a membership level">
+              <option value="" disabled selected>Select a membership level</option>
+              <option value="np">Non-Profit</option>
+              <option value="bronze">Bronze</option>
+              <option value="silver">Silver</option>
+              <option value="gold">Gold</option>
+            </select>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Business Description</legend>
+          <label for="description">Tell us about your organization
+            <textarea id="description" name="description" rows="4"
+            title="Brief description of your business or organization"
+            placeholder="Describe what your organization does..."></textarea>
+          </label>
+        </fieldset>
+
+        <!-- Timestamps -->
+        <input type="hidden" id="timestampe" name="timestampe" value="">
+        <input type="submit" value="Submit Application" class="submit-button">
+      </form>
+
+      <!-- Membership Cards -->
+      <aside class="membership-cards">
+        <article class="membership-card np-card">
+          <h3>Non-Profit Membership</h3>
+          <p class="price">Free</p>
+          <p>For non-profit organizations looking to support the community.</p>
+          <button class="info-button" data-modal="np-modal">More Info</button>
+        </article>
+
+        <article class="membership-card bronze-card">
+          <h3>Bronze Membership</h3>
+          <p class="price">$50/year</p>
+          <p>Basic membership with access to networking events and resources.</p>
+          <button class="info-button" data-modal="bronze-modal">More Info</button>
+        </article>
+
+        <article class="membership-card silver-card">
+          <h3>Silver Membership</h3>
+          <p class="price">$100/year</p>
+          <p>Includes all Bronze benefits plus additional promotional opportunities.</p>
+          <button class="info-button" data-modal="silver-modal">More Info</button>
+        </article>
+
+        <article class="membership-card gold-card">
+          <h3>Gold Membership</h3>
+          <p class="price">$200/year</p>
+          <p>All Silver benefits plus premium exposure and sponsorship opportunities.</p>
+          <button class="info-button" data-modal="gold-modal">More Info</button>
+        </article>
+      </aside>
+    </div>
+
+    <!-- Membership Modals -->
+    <dialog id="np-modal">
+      <button class="close-button" aria-label="Close">✖</button>
+      <h2>Non-Profit Membership Details</h2>
+      <ul>
+        <li>Free membership for non-profit organizations.</li>
+        <li>Listing in member directory.</li>
+        <li>Access to networking events.</li>
+        <li>Chamber newsletter subscription.</li>
+      </ul>
+    </dialog>
+
+    <dialog id="bronze-modal">
+      <button class="close-button" aria-label="Close">✖</button>
+      <h2>Bronze Membership Details</h2>
+      <ul>
+        <li>Annual fee: $50</li>
+        <li>All Non-Profit benefits.</li>
+        <li>Access to member-only events.</li>
+        <li>Basic promotional opportunities.</li>
+      </ul>
+    </dialog>
+
+    <dialog id="silver-modal">
+      <button class="close-button" aria-label="Close">✖</button>
+      <h2>Silver Membership Details</h2>
+      <ul>
+        <li>Annual fee: $100</li>
+        <li>All Bronze benefits.</li>
+        <li>Enhanced promotional opportunities.</li>
+        <li>Priority listing in member directory.</li>
+      </ul>
+    </dialog>
+
+    <dialog id="gold-modal">
+      <button class="close-button" aria-label="Close">✖</button>
+      <h2>Gold Membership Details</h2>
+      <ul>
+        <li>Annual fee: $200</li>
+        <li>All Silver benefits.</li>
+        <li>Premium exposure on chamber website and events.</li>
+        <li>Sponsorship opportunities for chamber events.</li>
+      </ul>
+    </dialog>
   </main>
 
   <footer>
