@@ -177,6 +177,55 @@ function setupMenuToggle() {
   }
 }
 
+// Membership Timestamp
+document.addEventListener('DOMContentLoaded', () => {
+  const timestampInput = document.getElementById('timestamp');
+  if (timestampInput) {
+    const now = new Date();
+    timestampInput.value = now.toLocaleString('en-US', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true
+    });
+  }
+
+  // Membership modal
+  const infoButtons = document.querySelectorAll('.info-button');
+  const closeButtons = document.querySelectorAll('.close-modal');
+
+  infoButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const modalId = button.getAttribute('data-modal');
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.showModal();
+      }
+    });
+  });
+
+  closeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const dialog = button.closest('dialog');
+      if (dialog) {
+        dialog.close();
+      }
+    });
+  });
+
+  // Close modal when clicking on the backdrop
+  document.querySelectorAll('dialog').forEach(dialog => {
+    dialog.addEventListener('click', (e) => {
+      if (e.target === dialog) {
+        dialog.close();
+      }
+    });
+  });
+});
+  
 // Footer Information Update
 function updateFooterInfo() {
   const currentYearElement = document.getElementById('currentYear');
