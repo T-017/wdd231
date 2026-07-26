@@ -585,6 +585,69 @@ dialog li {
   margin-bottom: 0.5rem;
 }
 
+/* Thank You Message */
+.thank-you-box {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+}
+
+.thank-you-box h1 {
+  color: var(--primary-color);
+  margin-top: 0;
+  align-items: center;
+}
+
+.thank-you-box .success-message {
+  text-align: center;
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+  color: var(--success-green);
+  font-weight: 600;
+}
+
+.submitted-data {
+  background: #f8f9fa;
+  padding: 1.25rem 1.5rem;
+  border-radius: 6px;
+  border-left: 4px solid var(--accent-gold);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.submitted-data p {
+  margin: 0.6rem 0;
+  line-height: 1.5;
+}
+
+.submitted-data strong {
+  color: var(--primary-color);
+  min-width: 140px;
+  display: inline-block;
+}
+
+.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.back-link a {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.back-link a:hover {
+  background: gold;
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
 /* Footer */
 footer {
   background-color: var(--primary-color);

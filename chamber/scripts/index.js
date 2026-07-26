@@ -225,7 +225,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-  
+
+document.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  const container = document.getElementById('submitted-data');
+
+  // Required to display
+  const fields = [
+    { key: 'fname', label: 'First Name' },
+    { key: 'lname', label: 'Last Name' },
+    { key: 'email', label: 'Email' },
+    { key: 'phone', label: 'Phone' },
+    { key: 'org', label: 'Organization' },
+    { key: 'timestamp', label: 'Timestamp' }
+  ];
+
+  let html = '';
+  fields.forEach(field => {
+    const value = params.get(field.key) || 'Not provided';
+    html += `<p><strong>${field.label}:</strong>${value}</p>`;
+  });
+
+  // If membership is present
+  const membership = params.get('membership');
+  if (membership) {
+    let membershipText = {
+      'np': 'Non-Profit Membership',
+      'bronze': 'Bronze Membership',
+      'silver': 'Silver Membership',
+      'gold': 'Gold Membership'
+    };
+    html += `<p><strong>Membership:</strong> ${membershipText[membership] || membership}</p>`;
+  }
+  container.innerHTML = html;
+});
+
 // Footer Information Update
 function updateFooterInfo() {
   const currentYearElement = document.getElementById('currentYear');
