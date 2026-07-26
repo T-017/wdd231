@@ -470,6 +470,7 @@ legend {
   animation-delay: 0.4s;
 }
 
+/* Membership IInfo */
 .membership-options h2 {
   color: var(--primary-color);
   font-size: 2.25rem;
