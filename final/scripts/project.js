@@ -117,7 +117,7 @@ function displayWeather(weatherDataList) {
   const cardsHtml = weatherDataList.map(data => {
     const temp = Math.round(data.main.temp);
     const desc = data.weather[0].description;
-    const iconSrc = `https://openweathermap.org/img/w/${data.weather[0].icon}@2x.png`;
+    const iconSrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
     const feelsLike = Math.round(data.main.feels_like);
     const humidity = data.main.humidity;
 
@@ -143,36 +143,6 @@ function displayWeather(weatherDataList) {
     </div>
   `;
 }
-
-//   try {
-//     for (const source of weatherSources) {
-//       const response = await fetch(source.url);
-//       if (response.ok) {
-//         const data = await response.json();
-//         displayWeather(data);
-//         console.log('Weather data fetched successfully:', data);
-//       }
-//     }
-//   } catch (error) {
-//     console.error('Error fetching weather data:', error);
-//   }
-// }
-
-// function displayWeather(data) {
-//   const container = document.getElementById('weather-data');
-//   const temp = Math.round(data.main.temp);
-//   const desc = data.weather[0].description;
-//   const iconSrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
-
-//   container.innerHTML = `
-//     <div class="weather-card">
-//       <h2>${data.name}</h2>
-//       <h3>${temp}°C</h3>
-//       <img src="${iconSrc}" alt="${desc} icon">
-//       <p>${desc}</p>
-//     </div>
-//   `;
-// }
 
 // Spotlight Feature
 async function loadMemberSpotlights() {
