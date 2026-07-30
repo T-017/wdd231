@@ -74,35 +74,105 @@ function displayMembers(viewType) {
 
 // Weather API Integration (OpenWeatherMap)
 const weatherApiKey = '4eb3ceb7dc6736a73d8e419d0dafb32c';
-const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=43.2740827351194&lon=142.61535116038758&units=metric&appid=${weatherApiKey}`;
+const weatherSources = [
+  {
+    name: 'Sapporo',
+    url: `https://api.openweathermap.org/data/2.5/weather?lat=43.065683&lon=141.358887&units=metric&appid=${weatherApiKey}`
+  },
+  {
+    name: 'Asahikawa',
+    url: `https://api.openweathermap.org/data/2.5/weather?lat=43.768261&lon=142.390639&units=metric&appid=${weatherApiKey}`
+  }, 
+  {
+    name: 'Hakodate',
+    url: `https://api.openweathermap.org/data/2.5/weather?lat=41.768793&lon=140.728794&units=metric&appid=${weatherApiKey}`
+  }
+];
 
 async function apiFetch() {
   try {
-    const response = await fetch(weatherUrl);
-    if (response.ok) {
-      const data = await response.json();
-      displayWeather(data);
-      console.log('Weather data fetched successfully:', data);
+    const response = await Promise.all(
+      weatherSources.map(source => fetch(source.url))
+    );
+
+    const failed = response.find(res => !res.ok);
+    if (failed) {
+      throw new Error(`Failed to fetch weather data from ${failed.url}`);
     }
+
+    const weatherDataList = await Promise.all(response.map(res => res.json())
+    );
+
+    displayWeather(weatherDataList);
+    console.log('Weather data fetched successfully:', weatherDataList);
   } catch (error) {
     console.error('Error fetching weather data:', error);
+    document.getElementById('weather-data').innerHTML =
+      '<p class="error">Unable to load weather data at this time.</p>';
   }
 }
 
-function displayWeather(data) {
+function displayWeather(weatherDataList) {
   const container = document.getElementById('weather-data');
-  const temp = Math.round(data.main.temp);
-  const desc = data.weather[0].description;
-  const iconSrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+  const cardsHtml = weatherDataList.map(data => {
+    const temp = Math.round(data.main.temp);
+    const desc = data.weather[0].description;
+    const iconSrc = `https://openweathermap.org/img/w/${data.weather[0].icon}@2x.png`;
+    const feelsLike = Math.round(data.main.feels_like);
+    const humidity = data.main.humidity;
+
+    return `
+      <div class="weather-card">
+        <h2>${data.name}</h2>
+        <div class="main-info">
+          <img src="${iconSrc}" alt="${desc}" class="weather-icon">
+          <div>
+            <h3>${temp}°C</h3>
+            <p class="description">${desc}</p>
+            <p class="feels-like">Feels like: ${feelsLike}°C</p>
+            <p class="humidity">Humidity: ${humidity}%</p>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
 
   container.innerHTML = `
-    <div class="weather-card">
-      <h3>${temp}°C</h3>
-      <img src="${iconSrc}" alt="${desc} icon">
-      <p>${desc}</p>
+    <div class="weather-grid">
+      ${cardsHtml}
     </div>
   `;
 }
+
+//   try {
+//     for (const source of weatherSources) {
+//       const response = await fetch(source.url);
+//       if (response.ok) {
+//         const data = await response.json();
+//         displayWeather(data);
+//         console.log('Weather data fetched successfully:', data);
+//       }
+//     }
+//   } catch (error) {
+//     console.error('Error fetching weather data:', error);
+//   }
+// }
+
+// function displayWeather(data) {
+//   const container = document.getElementById('weather-data');
+//   const temp = Math.round(data.main.temp);
+//   const desc = data.weather[0].description;
+//   const iconSrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+
+//   container.innerHTML = `
+//     <div class="weather-card">
+//       <h2>${data.name}</h2>
+//       <h3>${temp}°C</h3>
+//       <img src="${iconSrc}" alt="${desc} icon">
+//       <p>${desc}</p>
+//     </div>
+//   `;
+// }
 
 // Spotlight Feature
 async function loadMemberSpotlights() {
@@ -282,7 +352,7 @@ function updateFooterInfo() {
       second: '2-digit',
       hour12: false,
     });
-    lastModifiedElement.textContent = `${formattedDate} ${formattedTime}`;
+    lastModifiedElement.textContent = `${formattedDate} ${formattedTime}`;  
   }
 }
 

@@ -262,17 +262,15 @@ h1 {
   color: var(--primary-color);
 }
 
-/* Events and Weather */
-.events,
-.weather {
+/* Events */
+.events{
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.event-card,
-.weather-card {
+.event-card {
   background-color: var(--card-bg);
   display: flex;
   flex-direction: column;
@@ -291,7 +289,62 @@ h1 {
   color: var(--text-color);
 }
 
+/* Weather */
+.weather-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.weather-card {
+  background: var(--primary-color);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.weather-card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.4rem;
+}
+
+.main-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.weather-icon {
+  width: 70px;
+  height: 70px;
+}
+
 .weather-card h3 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.description {
+  margin: 0.25rem 0;
+  text-transform: capitalize;
+  opacity: 0.9;
+}
+
+.feels-like {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.humidity {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* .weather-card h3 {
   color: var(--primary-color);
   display: grid;
   grid-column: 2 / 2;
@@ -309,7 +362,7 @@ h1 {
   width: 75%;
   height: auto;
   border-radius: 8px;
-}
+} */
 
 /* Spotlight Grid */
 .spotlight-section {
