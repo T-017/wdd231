@@ -32,8 +32,8 @@ header span {
 
 header img {
   display: block;
-  width: 100px;
-  height: 70px;
+  width: 110px;
+  height: 75px;
   border-radius: 50%;
   padding: 20px;
   margin-left: 10px;
@@ -278,6 +278,14 @@ h1 {
   align-items: center;
 }
 
+.events h2, .weather h2, .spotlights h2 {
+  display: flex;
+  justify-content: center;
+  color: var(--text-color);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
 .event-card {
   background-color: var(--card-bg);
   display: flex;
@@ -331,7 +339,7 @@ h1 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.weather-card h2 {
+.weather-card h3 {
   display: flex;
   justify-content: center;
   font-size: 2rem;
