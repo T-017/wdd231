@@ -9,14 +9,14 @@
   --success-green: #28A745;
 }
 
-/* Body */
+/* ------------------------- Body ------------------------- */
 body {
   margin: 0;
   padding: 0;
   background-color: var(--light-bg);
 }
 
-/* Header and Navigation */
+/* ------------------------- Header and Navigation ------------------------- */
 header {
   background-color: var(--primary-color);
   color: white;
@@ -80,7 +80,7 @@ nav {
   line-height: 1;
 }
 
-/* Main */
+/* ------------------------- Main ------------------------- */
 main {
   padding: 2rem 1rem;
   max-width: 1200px;
@@ -93,7 +93,7 @@ h1 {
   text-align: center;
 }
 
-/* Toggle */
+/* ------------------------- Toggle ------------------------- */
 .toggle-buttons {
   display: flex;
   justify-content: center;
@@ -116,7 +116,7 @@ h1 {
   border-color: var(--primary-color);
 }
 
-/* Member Grid */
+/* ------------------------- Member Grid ------------------------- */
 #member-card {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -177,7 +177,7 @@ h1 {
   color: gold;
 }
 
-/* Membership Badges */
+/* ------------------------- Membership Badges ------------------------- */
 .membership-badge {
   display: inline-block;
   padding: 0.2rem 0.6rem;
@@ -201,7 +201,7 @@ h1 {
   color: white;
 }
 
-/* Member List */
+/* ------------------------- Member List ------------------------- */
 #member-card.list-view {
   display: block;
 }
@@ -225,7 +225,7 @@ h1 {
   font-size: 1.75rem;
 }
 
-/* Member Spotlight */
+/* ------------------------- Member Spotlight ------------------------- */
 .hero {
   background-color: var(--primary-color);
   color: white;
@@ -267,9 +267,10 @@ h1 {
 .cta-button:hover {
   background-color: #e6c200;
   color: var(--primary-color);
+  transform: translateY(-2px);
 }
 
-/* Events */
+/* ------------------------- Events ------------------------- */
 .events{
   margin-bottom: 2rem;
   display: flex;
@@ -287,17 +288,32 @@ h1 {
 
 .event-card {
   background-color: var(--card-bg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-content: center;
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.event-card h3, .event-card p{
+  display: flex;
+  justify-self: center;
+  text-align: center;
+}
+
 .event-card h3 {
   color: var(--primary-color);
+}
+
+img.event-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .event-card p {
@@ -305,16 +321,20 @@ h1 {
 }
 
 .event-card a {
-  color: var(--primary-color);
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
   text-decoration: none;
   font-weight: bold;
 }
 
 .event-card a:hover {
-  color: var(--text-color);
+  color: var(--primary-color);
 }
 
-/* Weather */
+/* ------------------------- Weather ------------------------- */
 #weather-data {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -378,7 +398,7 @@ h1 {
   opacity: 0.85;
 }
 
-/* Spotlight Grid */
+/* ------------------------- Spotlight Grid ------------------------- */
 .spotlight-section {
   margin-bottom: 2rem;
 }
@@ -411,7 +431,7 @@ h1 {
   border-bottom: 1px solid var(--border-color);
 }
 
-/* Join Base */
+/* ------------------------- Join Base ------------------------- */
 .join-intro {
   max-width: 100%;
   margin: 0 auto 2rem;
@@ -428,7 +448,7 @@ h1 {
   margin: 0 auto;
 }
 
-/* Form */
+/* ------------------------- Form ------------------------- */
 .join-form {
   background: var(--card-bg);
   padding: 1.5rem;
@@ -499,7 +519,7 @@ legend {
   transform: translateY(-2px);
 }
 
-/* Memberships */
+/* ------------------------- Memberships ------------------------- */
 .membership-options {
   display: grid;
   grid-template-columns: 1fr;
@@ -582,7 +602,7 @@ legend {
   transform: translateY(-2px);
 }
 
-/* Card Accent Colors */
+/* ------------------------- Card Accent Colors ------------------------- */
 .np-option {
   border-top: 10px solid #88b8e2;
 }
@@ -596,10 +616,10 @@ legend {
 }
 
 .gold-option {
-  border-top: 10px solid var(--accent-gold);
+  border-top: 10px solid gold;
 }
 
-/* Dialog / Modal Styles */
+/* ------------------------- Dialog / Modal Styles ------------------------- */
 dialog {
   border: 1px solid rgb(0 0 0 / 10%);
   border-radius: 0.5rem;
@@ -663,7 +683,7 @@ dialog li {
   margin-bottom: 0.5rem;
 }
 
-/* Thank You Message */
+/* ------------------------- Thank You Message ------------------------- */
 .thank-you-box {
   text-align: center;
   margin-top: 2rem;
@@ -726,7 +746,7 @@ dialog li {
   transform: translateY(-2px);
 }
 
-/* Footer */
+/* ------------------------- Footer ------------------------- */
 footer {
   background-color: var(--primary-color);
   padding: 2rem 1rem;
