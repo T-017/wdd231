@@ -3,7 +3,7 @@ let membersData = [];
 // Member Data Fetching
 async function fetchMembers() {
   try {
-    const response = await fetch('data/members.json');
+    const response = await fetch('data/services.json');
     if (!response.ok) {
       throw new Error('Failed to fetch members data');
     }
@@ -147,7 +147,7 @@ function displayWeather(weatherDataList) {
 // Spotlight Feature
 async function loadMemberSpotlights() {
   try {
-    const response = await fetch('data/members.json');
+    const response = await fetch('data/services.json');
     if (response.ok) {
       membersData = await response.json();
       displaySpotlights();
