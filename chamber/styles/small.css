@@ -639,16 +639,16 @@ dialog {
 }
 
 #np-modal {
-  margin: 75% auto;
+  margin: 125% auto;
 }
 #bronze-modal {
-  margin: 100% auto;
+  margin: 125% auto;
 }
 #silver-modal {
   margin: 125% auto;
 }
 #gold-modal {
-  margin: 150% auto;
+  margin: 125% auto;
 }
 
 ::backdrop {
