@@ -638,16 +638,7 @@ dialog {
   position: absolute;
 }
 
-#np-modal {
-  margin: 125% auto;
-}
-#bronze-modal {
-  margin: 125% auto;
-}
-#silver-modal {
-  margin: 125% auto;
-}
-#gold-modal {
+#np-modal, #bronze-modal, #silver-modal, #gold-modal {
   margin: 125% auto;
 }
 
