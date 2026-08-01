@@ -313,7 +313,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setupToggleButtons();
   setupMenuToggle();
   apiFetch();
-
   updateFooterInfo();
 
   const gridButton = document.getElementById('grid-button');
