@@ -9,14 +9,14 @@
   --success-green: #28A745;
 }
 
-/* Body */
+/* ------------------------- Body ------------------------- */
 body {
   margin: 0;
   padding: 0;
   background-color: var(--light-bg);
 }
 
-/* Header and Navigation */
+/* ------------------------- Header and Navigation ------------------------- */
 header {
   background-color: var(--primary-color);
   color: white;
@@ -71,7 +71,7 @@ nav {
   line-height: 1;
 }
 
-/* Main */
+/* ------------------------- Main ------------------------- */
 main {
   padding: 2rem 1rem;
   max-width: 1200px;
@@ -85,7 +85,7 @@ h1 {
   text-align: center;
 }
 
-/* Toggle */
+/* ------------------------- Toggle ------------------------- */
 .toggle-buttons {
   display: flex;
   justify-content: center;
@@ -108,7 +108,7 @@ h1 {
   border-color: var(--primary-color);
 }
 
-/* Member Grid */
+/* ------------------------- Member Grid ------------------------- */
 #member-card {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -169,7 +169,7 @@ h1 {
   color: gold;
 }
 
-/* Membership Badges */
+/* ------------------------- Membership Badges ------------------------- */
 .membership-badge {
   display: inline-block;
   padding: 0.2rem 0.6rem;
@@ -193,7 +193,7 @@ h1 {
   color: white;
 }
 
-/* Member List */
+/* ------------------------- Member List ------------------------- */
 #member-card.list-view {
   display: block;
 }
@@ -217,7 +217,7 @@ h1 {
   font-size: 1.75rem;
 }
 
-/* Member Spotlight */
+/* ------------------------- Member Spotlight ------------------------- */
 .hero {
   background-color: var(--primary-color);
   color: white;
@@ -262,7 +262,7 @@ h1 {
   color: var(--primary-color);
 }
 
-/* Events and Weather */
+/* ------------------------- Events and Weather ------------------------- */
 .events, .weather {
   margin-bottom: 2rem;
   display: flex;
@@ -309,7 +309,7 @@ h1 {
   border-radius: 8px;
 }
 
-/* Spotlight Grid */
+/* ------------------------- Spotlight Grid ------------------------- */
 .spotlight-section {
   margin-bottom: 2rem;
 }
@@ -342,7 +342,7 @@ h1 {
   border-bottom: 1px solid var(--border-color);
 }
 
-/* Join Base */
+/* ------------------------- Join Base ------------------------- */
 .join-intro {
   max-width: 100%;
   margin: 0 auto 2rem;
@@ -359,7 +359,7 @@ h1 {
   margin: 0 auto;
 }
 
-/* Form */
+/* ------------------------- Form ------------------------- */
 .join-form {
   background: var(--card-bg);
   padding: 1.5rem;
@@ -430,7 +430,7 @@ legend {
   transform: translateY(-2px);
 }
 
-/* Memberships */
+/* ------------------------- Memberships ------------------------- */
 .membership-options {
   display: grid;
   grid-template-columns: 1fr;
@@ -510,7 +510,108 @@ legend {
   transform: translateY(-2px);
 }
 
-/* Card Accent Colors */
+/* ------------------------- Discover ------------------------- */
+#visit-meassage {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  text-align: center;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  display: none;
+}
+
+#visit-message.show {
+  display: block;
+}
+
+#discover-gallery {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.discover-card {
+  background: var(--card-bg);
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.discover-card h2 {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin: 0 0 0.75rem;
+}
+
+.discover-intro {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.discover-card figure {
+  margin: 0 0 0.75rem;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.discover-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.discover-card img:hover {
+  transform: scale(1.06);
+  filter: brightness(1.1);
+}
+
+.discover-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  flex-grow: 1;
+  margin-bottom: 0.75rem;
+}
+
+.learn-more {
+  align-self: flex-start;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.15s;
+}
+
+.learn-more:hover {
+  background-color: gold;
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+
+
+/* ------------------------- Card Accent Colors ------------------------- */
 .np-option {
   border-top: 10px solid #88b8e2;
 }
@@ -524,7 +625,7 @@ legend {
   border-top: 10px solid var(--accent-gold);
 }
 
-/* Dialog / Modal Styles */
+/* ------------------------- Dialog / Modal Styles ------------------------- */
 dialog {
   border: 1px solid rgb(0 0 0 / 10%);
   border-radius: 0.5rem;
@@ -585,7 +686,7 @@ dialog li {
   margin-bottom: 0.5rem;
 }
 
-/* Thank You Message */
+/* ------------------------- Thank You Message ------------------------- */
 .thank-you-box {
   text-align: center;
   margin-top: 2rem;
@@ -648,7 +749,7 @@ dialog li {
   transform: translateY(-2px);
 }
 
-/* Footer */
+/* ------------------------- Footer ------------------------- */
 footer {
   background-color: var(--primary-color);
   padding: 2rem 1rem;
