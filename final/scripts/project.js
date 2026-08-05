@@ -11,20 +11,20 @@ async function fetchMembers() {
     displayMembers('grid');
   } catch (error) {
     console.error('Error fetching members:', error);
-    const container = document.getElementById('member-card');
+    const container = document.getElementById('services-card');
     container.innerHTML = '<p style="color: red; text-align: center;">Unable to load member data at this time.</p>';
   }
 }
 
 // Member Display Function
 function displayMembers(viewType) {
-  const container = document.getElementById('member-card');
+  const container = document.getElementById('services-card');
   container.innerHTML = '';
   container.className = viewType === 'grid' ? 'grid-view' : 'list-view';
 
   membersData.forEach(member => {
     const card = document.createElement('div');
-    card.className = 'member-card';
+    card.className = 'services-card';
 
     let membershipClass = '';
     let membershipText = '';

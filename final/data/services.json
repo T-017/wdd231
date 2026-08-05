@@ -1,26 +1,6 @@
 [
   {
-    "name": "Business Name 1",
-    "address": "123 Main St, Anytown, USA",
-    "phone": "(555) 123-4567",
-    "email": "something.something@example.com",
-    "image": "https://via.placeholder.com/150",
-    "membership": 3,
-    "website": "https://www.example.com",
-    "tagline": "A brief description of the business and its services."
-  },
-  {
-    "name": "Business Name 2",
-    "address": "123 Main St, Anytown, USA",
-    "phone": "(555) 123-4567",
-    "email": "something.something@example.com",
-    "image": "https://via.placeholder.com/150",
-    "membership": 2,
-    "website": "https://www.example.com",
-    "tagline": "A brief description of the business and its services."
-  },
-  {
-    "name": "Business Name 3",
+    "name": "Popular Destination 1",
     "address": "123 Main St, Anytown, USA",
     "phone": "(555) 123-4567",
     "email": "something.something@example.com",
@@ -30,37 +10,77 @@
     "tagline": "A brief description of the business and its services."
   },
   {
-    "name": "Business Name 4",
+    "name": "Popular Destination 2",
     "address": "123 Main St, Anytown, USA",
     "phone": "(555) 123-4567",
     "email": "something.something@example.com",
+    "image": "https://via.placeholder.com/150",
+    "membership": 1,
+    "website": "https://www.example.com",
+    "tagline": "A brief description of the business and its services."
+  },
+  {
+    "name": "Popular Destination 3",
+    "address": "123 Main St, Anytown, USA",
+    "phone": "(555) 123-4567",
+    "email": "something.something@example.com",
+    "image": "https://via.placeholder.com/150",
+    "membership": 1,
+    "website": "https://www.example.com",
+    "tagline": "A brief description of the business and its services."
+  },
+  {
+    "name": "Hotel Services 1",
+    "address": "123 Main St, Anytown, USA",
+    "phone": "(555) 123-4567",
+    "email": "something.something@example.com",
+    "membership": 2,
+    "image": "https://via.placeholder.com/150",
+    "website": "https://www.example.com",
+    "tagline": "A brief description of the business and its services."
+  },
+  {
+    "name": "Hotel Services 2",
+    "address": "123 Main St, Anytown, USA",
+    "phone": "(555) 123-4567",
+    "email": "something.something@example.com",
+    "image": "https://via.placeholder.com/150",
+    "membership": 2,
+    "website": "https://www.example.com",
+    "tagline": "A brief description of the business and its services."
+  },
+  {
+    "name": "Hotel Services 3",
+    "address": "123 Main St, Anytown, USA",
+    "phone": "(555) 123-4567",
+    "email": "something.something@example.com",
+    "image": "https://via.placeholder.com/150",
+    "membership": 2,
+    "website": "https://www.example.com",
+    "tagline": "A brief description of the business and its services."
+  },
+  {
+    "name": "Transportation Service 1",
+    "address": "123 Main St, Anytown, USA",
+    "phone": "(555) 123-4567",
+    "email": "something.something@example.com",
+    "image": "https://via.placeholder.com/150",
     "membership": 3,
-    "image": "https://via.placeholder.com/150",
     "website": "https://www.example.com",
     "tagline": "A brief description of the business and its services."
   },
   {
-    "name": "Business Name 5",
+    "name": "Transportation Service 2",
     "address": "123 Main St, Anytown, USA",
     "phone": "(555) 123-4567",
     "email": "something.something@example.com",
     "image": "https://via.placeholder.com/150",
-    "membership": 2,
+    "membership": 3,
     "website": "https://www.example.com",
     "tagline": "A brief description of the business and its services."
   },
   {
-    "name": "Business Name 6",
-    "address": "123 Main St, Anytown, USA",
-    "phone": "(555) 123-4567",
-    "email": "something.something@example.com",
-    "image": "https://via.placeholder.com/150",
-    "membership": 2,
-    "website": "https://www.example.com",
-    "tagline": "A brief description of the business and its services."
-  },
-  {
-    "name": "Business Name 7",
+    "name": "Transportation Service 3",
     "address": "123 Main St, Anytown, USA",
     "phone": "(555) 123-4567",
     "email": "something.something@example.com",
