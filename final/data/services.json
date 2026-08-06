@@ -5,7 +5,7 @@
     "phone": "(555) 123-4567",
     "email": "something.something@example.com",
     "image": "https://via.placeholder.com/150",
-    "membership": 1,
+    "service-type": 1,
     "website": "https://www.example.com",
     "tagline": "A brief description of the business and its services."
   },
@@ -15,7 +15,7 @@
     "phone": "(555) 123-4567",
     "email": "something.something@example.com",
     "image": "https://via.placeholder.com/150",
-    "membership": 1,
+    "service-type": 1,
     "website": "https://www.example.com",
     "tagline": "A brief description of the business and its services."
   },
@@ -25,7 +25,7 @@
     "phone": "(555) 123-4567",
     "email": "something.something@example.com",
     "image": "https://via.placeholder.com/150",
-    "membership": 1,
+    "service-type": 1,
     "website": "https://www.example.com",
     "tagline": "A brief description of the business and its services."
   },
@@ -34,7 +34,7 @@
     "address": "123 Main St, Anytown, USA",
     "phone": "(555) 123-4567",
     "email": "something.something@example.com",
-    "membership": 2,
+    "service-type": 2,
     "image": "https://via.placeholder.com/150",
     "website": "https://www.example.com",
     "tagline": "A brief description of the business and its services."
@@ -45,7 +45,7 @@
     "phone": "(555) 123-4567",
     "email": "something.something@example.com",
     "image": "https://via.placeholder.com/150",
-    "membership": 2,
+    "service-type": 2,
     "website": "https://www.example.com",
     "tagline": "A brief description of the business and its services."
   },
@@ -55,7 +55,7 @@
     "phone": "(555) 123-4567",
     "email": "something.something@example.com",
     "image": "https://via.placeholder.com/150",
-    "membership": 2,
+    "service-type": 2,
     "website": "https://www.example.com",
     "tagline": "A brief description of the business and its services."
   },
@@ -65,7 +65,7 @@
     "phone": "(555) 123-4567",
     "email": "something.something@example.com",
     "image": "https://via.placeholder.com/150",
-    "membership": 3,
+    "service-type": 3,
     "website": "https://www.example.com",
     "tagline": "A brief description of the business and its services."
   },
@@ -75,7 +75,7 @@
     "phone": "(555) 123-4567",
     "email": "something.something@example.com",
     "image": "https://via.placeholder.com/150",
-    "membership": 3,
+    "service-type": 3,
     "website": "https://www.example.com",
     "tagline": "A brief description of the business and its services."
   },
@@ -85,7 +85,7 @@
     "phone": "(555) 123-4567",
     "email": "something.something@example.com",
     "image": "https://via.placeholder.com/150",
-    "membership": 3,
+    "service-type": 3,
     "website": "https://www.example.com",
     "tagline": "A brief description of the business and its services."
   }

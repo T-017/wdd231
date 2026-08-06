@@ -1,69 +1,69 @@
-let membersData = [];
+let servicesData = [];
 
-// Member Data Fetching
-async function fetchMembers() {
+// Services Data Fetching
+async function fetchServices() {
   try {
     const response = await fetch('data/services.json');
     if (!response.ok) {
-      throw new Error('Failed to fetch members data');
+      throw new Error('Failed to fetch services data');
     }
-    membersData = await response.json();
-    displayMembers('grid');
+    servicesData = await response.json();
+    displayServices('grid');
   } catch (error) {
-    console.error('Error fetching members:', error);
+    console.error('Error fetching services:', error);
     const container = document.getElementById('services-card');
-    container.innerHTML = '<p style="color: red; text-align: center;">Unable to load member data at this time.</p>';
+    container.innerHTML = '<p style="color: red; text-align: center;">Unable to load services data at this time.</p>';
   }
 }
 
-// Member Display Function
-function displayMembers(viewType) {
+// Services Display Function
+function displayServices(viewType) {
   const container = document.getElementById('services-card');
   container.innerHTML = '';
   container.className = viewType === 'grid' ? 'grid-view' : 'list-view';
 
-  membersData.forEach(member => {
+  servicesData.forEach(service => {
     const card = document.createElement('div');
     card.className = 'services-card';
 
-    let membershipClass = '';
-    let membershipText = '';
-    if (member.membership === 3) {
-      membershipClass = 'gold';
-      membershipText = 'Gold Member';
-    } else if (member.membership === 2) {
-      membershipClass = 'silver';
-      membershipText = 'Silver Member';
+    let serviceClass = '';
+    let serviceText = '';
+    if (service['service-type'] === 2) {
+      serviceClass = 'accommodation';
+      serviceText = 'Hotel';
+    } else if (service['service-type'] === 3) {
+      serviceClass = 'transport';
+      serviceText = 'Transport';
     } else {
-      membershipClass = 'member';
-      membershipText = 'Member';
+      serviceClass = 'destination';
+      serviceText = 'Destination';
     }
 
     if (viewType === 'grid') {
       //Grid with images
       card.innerHTML = `
-        <img src="${member.image}" alt="${member.name} logo" loading="lazy">
-        <div class="member-info">
-          <span class="membership-badge ${membershipClass}">${membershipText}</span>
-          <h3>${member.name}</h3>
-          <p class="tagline">${member.tagline}</p>
-          <p><strong>EMAIL:</strong> ${member.email}</p>
-          <p><strong>PHONE:</strong> ${member.phone}</p>
-          <p><strong>URL:</strong> <a href="${member.website}" target="_blank" rel="noopener">${member.website}</a></p>
-          <p><strong>ADDRESS:</strong> ${member.address}</p>
+        <img src="${service.image}" alt="${service.name} logo" loading="lazy">
+        <div class="service-info">
+          <span class="service-badge ${serviceClass}">${serviceText}</span>
+          <h3>${service.name}</h3>
+          <p class="tagline">${service.tagline}</p>
+          <p><strong>EMAIL:</strong> ${service.email}</p>
+          <p><strong>PHONE:</strong> ${service.phone}</p>
+          <p><strong>URL:</strong> <a href="${service.website}" target="_blank" rel="noopener">${service.website}</a></p>
+          <p><strong>ADDRESS:</strong> ${service.address}</p>
         </div>
       `;
     } else {
       // List without images
       card.innerHTML = `
-        <div class="member-info">
-          <span class="membership-badge ${membershipClass}">${membershipText}</span>
-          <h3>${member.name}</h3>
-          <p class="tagline">${member.tagline}</p>
-          <p><strong>EMAIL:</strong> ${member.email}</p>
-          <p><strong>PHONE:</strong> ${member.phone}</p>
-          <p><strong>URL:</strong> <a href="${member.website}" target="_blank" rel="noopener">${member.website}</a></p>
-          <p><strong>ADDRESS:</strong> ${member.address}</p>
+        <div class="service-info">
+          <span class="service-badge ${serviceClass}">${serviceText}</span>
+          <h3>${service.name}</h3>
+          <p class="tagline">${service.tagline}</p>
+          <p><strong>EMAIL:</strong> ${service.email}</p>
+          <p><strong>PHONE:</strong> ${service.phone}</p>
+          <p><strong>URL:</strong> <a href="${service.website}" target="_blank" rel="noopener">${service.website}</a></p>
+          <p><strong>ADDRESS:</strong> ${service.address}</p>
         </div>
       `;
     }
@@ -145,20 +145,20 @@ function displayWeather(weatherDataList) {
 }
 
 // Spotlight Feature
-async function loadMemberSpotlights() {
+async function loadServiceSpotlights() {
   try {
     const response = await fetch('data/services.json');
     if (response.ok) {
-      membersData = await response.json();
+      servicesData = await response.json();
       displaySpotlights();
     }
   } catch (error) {
-    console.error('Error loading member spotlights:', error);
+    console.error('Error loading service spotlights:', error);
   }
 }
 
 function getSpotlights() {
-  const premium = membersData.filter(m => m.membership >= 2);
+  const premium = servicesData.filter(m => m['service-type'] >= 2);
   const shuffled = [...premium].sort(() => 0.5 - Math.random());
   return shuffled.slice(0, 2);
 }
@@ -167,13 +167,13 @@ function displaySpotlights() {
   const container = document.getElementById('spotlight-container');
   const spotlights = getSpotlights();
 
-  container.innerHTML = spotlights.map(member => `
-    <div class="spotlight-grid">
-      <img src="${member.image}" alt="${member.name}">
-      <h3>${member.name}</h3>
-      <p>${member.tagline}</p>
-      <p><strong>${member.email}</strong></p>
-      <a href="${member.website}" target="_blank">Visit Website</a>
+  container.innerHTML = spotlights.map(service => `
+    <div class="spotlight-card">
+      <img src="${service.image}" alt="${service.name}">
+      <h3>${service.name}</h3>
+      <p>${service.tagline}</p>
+      <p><strong>${service.email}</strong></p>
+      <a href="${service.website}" target="_blank">Visit Website</a>
     </div>
   `).join('');
 }
@@ -186,13 +186,13 @@ function setupToggleButtons() {
   gridButton.addEventListener('click', () => {
     gridButton.classList.add('active');
     listButton.classList.remove('active');
-    displayMembers('grid');
+    displayServices('grid');
   });
 
   listButton.addEventListener('click', () => {
     listButton.classList.add('active');
     gridButton.classList.remove('active');
-    displayMembers('list');
+    displayServices('list');
   });
 }
 
@@ -347,12 +347,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  loadMemberSpotlights();
-  fetchMembers();
+  loadServiceSpotlights();
+  fetchServices();
   apiFetch();
   setupToggleButtons();
   setupMenuToggle();
-  apiFetch();
   updateFooterInfo();
 
   const gridButton = document.getElementById('grid-button');

@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #4b7cb4;
-  --accent: #e8e8e8;
+  --primary-color: #5887bc;
+  --accent: #7c7c7c;
   --light-bg: #e9e9e9;
   --card-bg: #FFFFFF;
   --text-color: #2d3056;
@@ -148,7 +148,7 @@ h1 {
   border-color: var(--primary-color);
 }
 
-/* ------------------------- Member Grid ------------------------- */
+/* ------------------------- Service Grid ------------------------- */
 #services-card {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -177,40 +177,40 @@ h1 {
   border-bottom: 1px solid var(--border-color);
 }
 
-.member-info {
+.service-info {
   padding: 0.5rem 0;
 }
 
-.member-info h3 {
+.service-info h3 {
   font-size: 1.25rem;
   color: var(--primary-color);
   margin: 0.5rem 0;
 }
 
-.member-info .tagline {
+.service-info .tagline {
   font-size: 1rem;
   color: var(--accent);
   margin-bottom: 0.75rem;
   font-style: italic;
 }
 
-.member-info p {
+.service-info p {
   font-size: 0.95rem;
   color: var(--text-color);
   margin-bottom: 0.5rem;
 }
 
-.member-info a {
+.service-info a {
   color: var(--primary-color);
   text-decoration: none;
 }
 
-.member-info a:hover {
+.service-info a:hover {
   color: gold;
 }
 
-/* ------------------------- Membership Badges ------------------------- */
-.membership-badge {
+/* ------------------------- Service Badges ------------------------- */
+.service-badge {
   display: inline-block;
   padding: 0.2rem 0.6rem;
   border-radius: 12px;
@@ -218,22 +218,22 @@ h1 {
   font-weight: 600;
 }
 
-.gold {
+.accommodation {
   background-color: #9a7e22;
   color: white;
 }
 
-.silver {
+.transport {
   background-color: #7a7a7a;
   color: white;
 }
 
-.member {
+.destination {
   background-color: #734922;
   color: white;
 }
 
-/* ------------------------- Member List ------------------------- */
+/* ------------------------- Service List ------------------------- */
 #services-card.list-view {
   display: block;
 }
@@ -249,15 +249,15 @@ h1 {
   display: none;
 }
 
-#services-card.list-view .member-info {
+#services-card.list-view .service-info {
   padding: 1rem;
 }
 
-#services-card.list-view .member-info h3 {
+#services-card.list-view .service-info h3 {
   font-size: 1.75rem;
 }
 
-/* ------------------------- Member Spotlight ------------------------- */
+/* ------------------------- Service Spotlight ------------------------- */
 .hero {
   background-color: var(--primary-color);
   color: white;
@@ -275,7 +275,7 @@ h1 {
 .hero img {
   max-width: 95%;
   height: auto;
-  background-color: var(--accent);
+  background-color: var(--light-bg);
   border-radius: 8px;
   padding: 1rem;
   margin-top: 1rem;
@@ -436,10 +436,10 @@ img.event-image {
 }
 
 .spotlight-grid {
+  background-color: var(--primary-color);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  background-color: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 1rem;
@@ -447,8 +447,9 @@ img.event-image {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.spotlight-grid .spotlight-card {
+.spotlight-card {
   background-color: var(--card-bg);
+  color: var(--text-color);
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 1rem;
@@ -461,6 +462,16 @@ img.event-image {
   object-fit: cover;
   border-radius: 8px;
   border-bottom: 1px solid var(--border-color);
+}
+
+.spotlight-card a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.spotlight-card a:hover {
+  color: var(--primary-color);
 }
 
 /* ------------------------- Join Base ------------------------- */
@@ -551,14 +562,14 @@ legend {
   transform: translateY(-2px);
 }
 
-/* ------------------------- Memberships ------------------------- */
-.membership-options {
+/* ------------------------- Services ------------------------- */
+.service-options {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
 }
 
-.membership-options article {
+.service-options article {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 8px;
@@ -578,36 +589,36 @@ legend {
   }
 }
 
-.membership-options article:nth-child(1) {
+.service-options article:nth-child(1) {
   animation-delay: 0.1s;
 }
 
-.membership-options article:nth-child(2) {
+.service-options article:nth-child(2) {
   animation-delay: 0.2s;
 }
 
-.membership-options article:nth-child(3) {
+.service-options article:nth-child(3) {
   animation-delay: 0.3s;
 }
 
-.membership-options article:nth-child(4) {
+.service-options article:nth-child(4) {
   animation-delay: 0.4s;
 }
 
-.membership-options h2 {
+.service-options h2 {
   color: var(--primary-color);
   font-size: 2.25rem;
   margin-bottom: 0.25rem;
 }
 
-.membership-options .price {
+.service-options .price {
   font-size: 1.75rem;
   font-weight: bold;
   color: var(--primary-color);
   margin-bottom: 0.5rem;
 }
 
-.membership-options p {
+.service-options p {
   color: var(--text-color);
   font-size: 1.25rem;
   margin-bottom: 1rem;
