@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Japan - Services</title>
-  <meta property="og:title" content="Travel Japan - Services">
-  <meta property="og:description" content="Travel Hokkaido - Services: From hotel accommodations to popular tourist destinations, explore the best services Hokkaido has to offer.">
+  <title>Travel Japan - Events</title>
+  <meta property="og:title" content="Travel Japan - Events">
+  <meta property="og:description"
+    content="Travel Hokkaido - Events: Discover the latest events happening in Hokkaido, from cultural festivals to seasonal celebrations.">
   <meta property="og:image" content="https://t-017.github.io/wdd231/final/images/general-hokkaido.jpg">
-  <meta property="og:url" content="https://t-017.github.io/wdd231/final/services.html">
+  <meta property="og:url" content="https://t-017.github.io/wdd231/final/events.html">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="styles/project-small.css">
   <link rel="stylesheet" href="styles/project-medium.css">
@@ -18,8 +19,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
   <script src="scripts/project.js" defer></script>
-  <meta name="description" content="Travel Hokkaido - Services: From hotel accommodations to popular tourist destinations, explore the best services Hokkaido has to offer.">
-  <meta name="keywords" content="Travel Hokkaido, Hokkaido, Japan, Travel, Hotels, Accommodations, Locations, Hot Spots, Springs, travel services, transportation">
+  <script type="module" src="scripts/events.js"></script>
+  <meta name="description" content="Travel Hokkaido - Events: Discover the latest events happening in Hokkaido, from cultural festivals to seasonal celebrations.">
+  <meta name="keywords" content="Travel Hokkaido, Hokkaido, Japan, Travel, Events, Seasonal, Festivals, Locations, Celebrations, Culture">
   <meta name="author" content="J. Toshio Holt">
 </head>
 
@@ -32,21 +34,25 @@
 
       <ul id="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="events.html" class="active">Events</a></li>
+        <li><a href="services.html">Services</a></li>
         <li><a href="join.html">Join</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>Accommodations and Services</h1>
-    <div class="toggle-buttons">
-      <button id="grid-button">Grid</button>
-      <button id="list-button">List</button>
-    </div>
-    
-    <div id="services-card" class="grid-view"></div>
+    <h1>Events Throughout Hokkaido</h1>
+    <p class="discover-intro">
+      Welcome to Anna, TX – a vibrant community with a rich history and a bright future.
+      Explore our local businesses, cultural events, and community initiatives that make Anna a great place to live, work,
+      and visit.
+      Visit the many local attractions, enjoy our annual festivals, and connect with the people who make Anna special.
+    </p>
+  
+    <div id="visit-message" aria-live="polite"></div>
+  
+    <section id="discover-gallery" aria-label="Points of interest in Anna"></section>
   </main>
 
   <footer>

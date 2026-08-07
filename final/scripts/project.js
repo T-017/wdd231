@@ -1,6 +1,6 @@
 let servicesData = [];
 
-// Services Data Fetching
+// Services Data Fetching ------------------------------------------------------------
 async function fetchServices() {
   try {
     const response = await fetch('data/services.json');
@@ -16,7 +16,7 @@ async function fetchServices() {
   }
 }
 
-// Services Display Function
+// Services Display Function ------------------------------------------------------------
 function displayServices(viewType) {
   const container = document.getElementById('services-card');
   container.innerHTML = '';
@@ -72,7 +72,7 @@ function displayServices(viewType) {
   });
 }
 
-// Weather API Integration (OpenWeatherMap)
+// Weather API Integration (OpenWeatherMap) ------------------------------------------------------------
 const weatherApiKey = '4eb3ceb7dc6736a73d8e419d0dafb32c';
 const weatherSources = [
   {
@@ -144,7 +144,7 @@ function displayWeather(weatherDataList) {
   `;
 }
 
-// Spotlight Feature
+// Spotlight Feature ------------------------------------------------------------
 async function loadServiceSpotlights() {
   try {
     const response = await fetch('data/services.json');
@@ -178,7 +178,7 @@ function displaySpotlights() {
   `).join('');
 }
 
-// Grid and List View Toggle
+// Grid and List View Toggle ------------------------------------------------------------
 function setupToggleButtons() {
   const gridButton = document.getElementById('grid-button');
   const listButton = document.getElementById('list-button');
@@ -196,7 +196,7 @@ function setupToggleButtons() {
   });
 }
 
-// Menu Toggle for Mobile View
+// Menu Toggle for Mobile View ------------------------------------------------------------
 function setupMenuToggle() {
   const menuButton = document.getElementById('menuButton');
   const navLinks = document.getElementById('nav-links');
@@ -217,7 +217,7 @@ function setupMenuToggle() {
   }
 }
 
-// Membership Timestamp
+// Membership Timestamp ------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
   const timestampInput = document.getElementById('timestamp');
   if (timestampInput) {
@@ -300,7 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
   container.innerHTML = html;
 });
 
-// Footer Information Update
+// Footer Information Update ------------------------------------------------------------
 function updateFooterInfo() {
   const currentYearElement = document.getElementById('currentYear');
   if (currentYearElement) {

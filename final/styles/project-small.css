@@ -645,6 +645,106 @@ legend {
   transform: translateY(-2px);
 }
 
+/* ------------------------- Discover ------------------------- */
+#visit-message {
+  background-color: var(--primary-color);
+  color: var(--light-bg);
+  text-align: center;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  font-weight: 650;
+  display: none;
+}
+
+#visit-message.show {
+  display: block;
+}
+
+#discover-gallery {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.discover-card {
+  background: var(--card-bg);
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.discover-card h2 {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin: 0 0 0.75rem;
+}
+
+.discover-intro {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.discover-card figure {
+  margin: 0 0 0.75rem;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.discover-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.discover-card img:hover {
+  transform: scale(1.06);
+  filter: brightness(1.1);
+}
+
+.discover-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  flex-grow: 1;
+  margin-bottom: 0.75rem;
+}
+
+.learn-more {
+  align-self: flex-start;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.15s;
+}
+
+.learn-more:hover {
+  background-color: gold;
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
 /* ------------------------- Card Accent Colors ------------------------- */
 .np-option {
   border-top: 10px solid #88b8e2;
