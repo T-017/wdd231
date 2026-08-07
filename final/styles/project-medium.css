@@ -20,7 +20,7 @@
     height: 500px;
   }
 
-  #discover-gallery {
+  #events-gallery {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "card1 card2"

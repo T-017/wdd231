@@ -1,6 +1,6 @@
 import places from '../data/events.mjs';
 
-const gallery = document.querySelector('#discover-gallery');
+const gallery = document.querySelector('#events-gallery');
 const visitMessage = document.querySelector('#visit-message');
 
 function displayVisitMessage() {
@@ -15,11 +15,11 @@ function displayVisitMessage() {
     const daysBetween = Math.floor(msBetween / (1000 * 60 * 60 * 24));
 
     if (daysBetween < 1) {
-      message = 'Back so soon? Awesome!';
+      message = 'Welcome back! We\'re glad to see you again.';
     } else if (daysBetween === 1) {
-      message = 'You last visited 1 day ago.';
+      message = 'Welcome Back! You last visited 1 day ago.';
     } else {
-      message = `You last visited ${daysBetween} days ago.`;
+      message = `Welcome Back! You last visited ${daysBetween} days ago.`;
     }
   }
 
@@ -35,7 +35,7 @@ function displayPlaces() {
 
   places.forEach((place, index) => {
     const card = document.createElement('article');
-    card.classList.add('discover-card');
+    card.classList.add('events-card');
     card.style.gridArea = `card${index + 1}`;
 
     card.innerHTML = `

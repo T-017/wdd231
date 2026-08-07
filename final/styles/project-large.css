@@ -20,7 +20,7 @@
     height: 600px;
   }
 
-  #discover-gallery {
+  #events-gallery {
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
       "card1 card1 card2 card3"
