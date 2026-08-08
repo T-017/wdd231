@@ -28,4 +28,9 @@
       "card4 card6 card7 card7"
       "card8 card8 card7 card7";
   }
+
+    #subs-options {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
 }

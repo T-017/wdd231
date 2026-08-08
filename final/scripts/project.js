@@ -273,10 +273,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Required to display
   const fields = [
     { key: 'fname', label: 'First Name' },
-    { key: 'lname', label: 'Last Name' },
     { key: 'email', label: 'Email' },
-    { key: 'phone', label: 'Phone' },
-    { key: 'org', label: 'Organization' },
+    { key: 'sub-date', label: 'Subscription Start Date' },
     { key: 'timestamp', label: 'Timestamp' }
   ];
 
