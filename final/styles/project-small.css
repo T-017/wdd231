@@ -887,7 +887,7 @@ dialog li {
 .back-link a:hover {
   background: gold;
   color: var(--primary-color);
-  transform: translateY(-2px);
+  transform: translateY(-4px);
 }
 
 /* ------------------------- Footer ------------------------- */
