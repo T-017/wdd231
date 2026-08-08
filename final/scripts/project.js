@@ -283,18 +283,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const value = params.get(field.key) || 'Not provided';
     html += `<p><strong>${field.label}:</strong>${value}</p>`;
   });
-
-  // If membership is present
-  const membership = params.get('membership');
-  if (membership) {
-    let membershipText = {
-      'np': 'Non-Profit Membership',
-      'bronze': 'Bronze Membership',
-      'silver': 'Silver Membership',
-      'gold': 'Gold Membership'
-    };
-    html += `<p><strong>Membership:</strong> ${membershipText[membership] || membership}</p>`;
-  }
   container.innerHTML = html;
 });
 

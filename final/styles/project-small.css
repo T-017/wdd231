@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #5887bc;
+  --primary-color: #4b7ab0;
   --accent: #7c7c7c;
   --light-bg: #e9e9e9;
   --card-bg: #FFFFFF;
@@ -822,7 +822,7 @@ dialog li {
 .thank-you-box {
   text-align: center;
   margin-top: 2rem;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: var(--primary-color);
 }
 
@@ -834,29 +834,38 @@ dialog li {
 
 .thank-you-box .success-message {
   text-align: center;
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   margin-bottom: 1.5rem;
   color: var(--success-green);
   font-weight: 600;
 }
 
+.thank-you-box img {
+  max-width: 100%;
+  height: auto;
+  background-color: var(--primary-color);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
 .submitted-data {
   background: #f8f9fa;
   padding: 1.25rem 1.5rem;
-  border-radius: 6px;
+  border-radius: 8px;
   border-left: 4px solid var(--accent-gold);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .submitted-data p {
-  margin: 0.6rem 0;
+  margin: 1.25rem;
   line-height: 1.5;
+  color: var(--text-color);
 }
 
 .submitted-data strong {
+  display: flex;
+  justify-content: center;
   color: var(--primary-color);
-  min-width: 140px;
-  display: inline-block;
 }
 
 .back-link {
