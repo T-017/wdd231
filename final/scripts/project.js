@@ -171,7 +171,6 @@ function displaySpotlights() {
       <img src="${service.image}" alt="${service.name}">
       <h3>${service.name}</h3>
       <p>${service.tagline}</p>
-      <p><strong>${service.email}</strong></p>
       <a href="${service.website}" target="_blank">Visit Website</a>
     </div>
   `).join('');
