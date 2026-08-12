@@ -1,92 +1,83 @@
 [
   {
-    "name": "Popular Destination 1",
-    "address": "123 Main St, Anytown, USA",
-    "phone": "(555) 123-4567",
-    "email": "something.something@example.com",
-    "image": "https://via.placeholder.com/150",
+    "name": "Shirogane Blue Pond",
+    "address": "Shirogane, Biei, Kamikawa District, Hokkaido 071-0235, Japan",
+    "phone": "+81 16-692-4321",
+    "image": "https://lh3.googleusercontent.com/gpms-cs-s/AFP8RcN65mj_XsmJXf33Bwj_XOJkEDGgMgs8L61P1_1MhjuM1pgiYZjOo1-wdjbhDBa1RguTx2Y_SdP99d2SLc3EtNbqX4SZZ0zrZ7qwyVlr9llkYhZgjYQbFT9UaPmIN0v4nelQu7Xd=s680-w680-h510-rw",
     "service-type": 1,
-    "website": "https://www.example.com",
-    "tagline": "A brief description of the business and its services."
+    "website": "https://www.biei-hokkaido.jp/ja/shirogane-blue-pond",
+    "tagline": "Shirogane Blue Pond is a picturesque pond known for its stunning blue color."
   },
   {
-    "name": "Popular Destination 2",
-    "address": "123 Main St, Anytown, USA",
-    "phone": "(555) 123-4567",
-    "email": "something.something@example.com",
-    "image": "https://via.placeholder.com/150",
+    "name": "Farm Tomita",
+    "address": "15 Kisenkita, Nakafurano, Sorachi District, Hokkaido 071-0704, Japan",
+    "phone": "+81 16-739-3939",
+    "image": "https://lh3.googleusercontent.com/gpms-cs-s/AFP8RcMjIFRbC5BMQuE1ITtJ5Th500beuX6EEOLIJ5cuSjaN_UCzMAW5N0ejVvnj66A8XDUwcDMeoBFRli75yGUEUT5JfZJ3tJxPAw-4tL0LfDqPU2lQnFjPpqiXuBtE6ix0I9v0AIMCcw=s680-w680-h510-rw",
     "service-type": 1,
-    "website": "https://www.example.com",
-    "tagline": "A brief description of the business and its services."
+    "website": "https://www.farm-tomita.co.jp/",
+    "tagline": "Farm Tomita is famous for its beautiful flower fields, especially lavender."
   },
   {
-    "name": "Popular Destination 3",
-    "address": "123 Main St, Anytown, USA",
-    "phone": "(555) 123-4567",
-    "email": "something.something@example.com",
-    "image": "https://via.placeholder.com/150",
+    "name": "Sapporo Beer Museum",
+    "address": "9 Chome-1-1 Kita 7 Johigashi, Higashi Ward, Sapporo, Hokkaido 065-8633, Japan",
+    "phone": "+81 11-748-1876",
+    "image": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmVjDbrIa2FSKc_FbJeFcGJIA8fi0XrJlXcidmIbmlEOVrOCnI9NbMEu6irVWfc_KUSFlfjn6gCQhjSqEMQWxCv_RvfdSix_uOfYOPuPk93X5a5o80g-OeI0pNnFF1n9gFnWgbW=s680-w680-h510-rw",
     "service-type": 1,
-    "website": "https://www.example.com",
-    "tagline": "A brief description of the business and its services."
+    "website": "https://www.sapporobeer.jp/brewery/s_museum/",
+    "tagline": "The Sapporo Beer Museum offers insights into the history of beer in Japan and the brewing process."
   },
   {
-    "name": "Hotel Services 1",
-    "address": "123 Main St, Anytown, USA",
-    "phone": "(555) 123-4567",
-    "email": "something.something@example.com",
+    "name": "La'gent Stay Sapporo Odori",
+    "address": "5 Chome-26-5 Minami 2 Jonishi, Chuo Ward, Sapporo, Hokkaido 060-0062, Japan",
+    "phone": "+81 11-200-5507",
     "service-type": 2,
-    "image": "https://via.placeholder.com/150",
-    "website": "https://www.example.com",
-    "tagline": "A brief description of the business and its services."
+    "image": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlEmFBe9Nn0CZgrjhdZ8Q-YXDuBOiVTh3TkvRkmEP45Y1_EIkj1UthNfDKDkHa7MP5WSyuxKJ82znFR1BT4vcyrXMYbON5K176Fo8xjUkT7GmdyqLaDHhP2NBCIGD_MiQgiBGfHSQ=w287-h192-n-k-rw-no-v1",
+    "website": "https://lagent.jp/sapporo-odori/en/",
+    "tagline": "La'gent Stay Sapporo Odori offers comfortable accommodations in the heart of Sapporo."
   },
   {
-    "name": "Hotel Services 2",
-    "address": "123 Main St, Anytown, USA",
-    "phone": "(555) 123-4567",
-    "email": "something.something@example.com",
-    "image": "https://via.placeholder.com/150",
+    "name": "Shikishimaso",
+    "address": "Japan, 〒071-1473 Hokkaido, Kamikawa District, Higashikawa, 松山温泉",
+    "phone": "+81 16-697-2141",
+    "image": "https://cf.bstatic.com/xdata/images/hotel/max300/622855015.jpg?k=85e00edd0cd5068c8f9eeae4e390e873aec00fb89295dc1b5f16d8045569fa42&o=",
     "service-type": 2,
-    "website": "https://www.example.com",
-    "tagline": "A brief description of the business and its services."
+    "website": "https://shikishimaso.com/",
+    "tagline": "Shikishimaso offers traditional Japanese accommodations with hot spring baths."
   },
   {
-    "name": "Hotel Services 3",
-    "address": "123 Main St, Anytown, USA",
-    "phone": "(555) 123-4567",
-    "email": "something.something@example.com",
-    "image": "https://via.placeholder.com/150",
+    "name": "Grand Park Otaru",
+    "address": "1-4-15 Ironai, Otaru, Hokkaido 047-0031, Japan",
+    "phone": "+81 13-421-3111",
+    "image": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmD6lOQdeN8iuXdRbXdha8c4Occvyx3TtbIBxuTpvNDMrLP9PHo3zSB8oTDyvWzC0XnsMuk13WtlJ8UJGSzPtmQIXhJE7zRFOKv-FlUZtjzD_0bmCgIX7hVReJ-e7XRILbXaa19yFoRgH6C=w287-h192-n-k-rw-no-v1",
     "service-type": 2,
-    "website": "https://www.example.com",
-    "tagline": "A brief description of the business and its services."
+    "website": "https://www.parkhotelgroup.com/ja/",
+    "tagline": "Grand Park Otaru offers elegant accommodations and convenient access to Otaru's attractions."
   },
   {
-    "name": "Transportation Service 1",
-    "address": "123 Main St, Anytown, USA",
-    "phone": "(555) 123-4567",
-    "email": "something.something@example.com",
-    "image": "https://via.placeholder.com/150",
+    "name": "JR Kokkaido Railway Company",
+    "address": "North 8 East 1, Kita Ward, Sapporo, Hokkaido 060-0808, Japan",
+    "phone": "+81 11-222-7111",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyp9OCqWoUlAHYkBsnpOH4340RX9GxuvCNsHihOyNIMEjHaRvZUGOvjoWF&s=10",
     "service-type": 3,
-    "website": "https://www.example.com",
-    "tagline": "A brief description of the business and its services."
+    "website": "https://www.jrhokkaido.co.jp/",
+    "tagline": "JR Hokkaido Railway Company provides extensive rail services throughout Hokkaido."
   },
   {
-    "name": "Transportation Service 2",
-    "address": "123 Main St, Anytown, USA",
-    "phone": "(555) 123-4567",
-    "email": "something.something@example.com",
-    "image": "https://via.placeholder.com/150",
+    "name": "JL Long Course Ferry Services Association",
+    "address": "1 Chome-1-1 Minato, Hakodate, Hokkaido 040-0063, Japan",
+    "phone": "+81 138-23-1234",
+    "image": "https://photos.smugmug.com/Kyoto/Ferry-Trip-to-Hokkaido/i-HPSJHcj/0/08f9f053/L/01%20Suisen%20ferry%20from%20the%20air-L.jpg",
     "service-type": 3,
-    "website": "https://www.example.com",
-    "tagline": "A brief description of the business and its services."
+    "website": "https://www.jlc-ferry.jp/",
+    "tagline": "JL Long Course Ferry Services Association provides ferry services connecting various ports in Japan."
   },
   {
-    "name": "Transportation Service 3",
-    "address": "123 Main St, Anytown, USA",
-    "phone": "(555) 123-4567",
-    "email": "something.something@example.com",
-    "image": "https://via.placeholder.com/150",
+    "name": "Adventure Travel Hokkaido",
+    "address": "10-10 South, Higashikagura, Hokkaido, Japan",
+    "phone": "+81 11-231-0941",
+    "image": "https://visit-hokkaido.jp/en/adventure-travel/adventure_travel_wp/wp-content/themes/adventure_travel_wp/assets/img/ogp.png",
     "service-type": 3,
-    "website": "https://www.example.com",
-    "tagline": "A brief description of the business and its services."
+    "website": "https://www.visit-hokkaido.jp/en/",
+    "tagline": "Adventure Travel Hokkaido offers guided adventure tours and travel experiences throughout Hokkaido."
   }
 ]

@@ -47,7 +47,6 @@ function displayServices(viewType) {
           <span class="service-badge ${serviceClass}">${serviceText}</span>
           <h3>${service.name}</h3>
           <p class="tagline">${service.tagline}</p>
-          <p><strong>EMAIL:</strong> ${service.email}</p>
           <p><strong>PHONE:</strong> ${service.phone}</p>
           <p><strong>URL:</strong> <a href="${service.website}" target="_blank" rel="noopener">${service.website}</a></p>
           <p><strong>ADDRESS:</strong> ${service.address}</p>
