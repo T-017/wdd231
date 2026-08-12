@@ -120,7 +120,7 @@ main {
 }
 
 h1 {
-  color: var(--primary-color);
+  color: var(--text-color);
   margin-bottom: 1rem;
   text-align: center;
 }
@@ -394,6 +394,7 @@ img.event-image {
   display: flex;
   justify-content: center;
   font-size: 2rem;
+  margin: 0;
 }
 
 .main-info {
@@ -408,11 +409,6 @@ img.event-image {
   padding: 0.5rem;
   width: 100px;
   height: 100px;
-}
-
-.weather-card h3 {
-  margin: 0;
-  font-size: 2rem;
 }
 
 .description {
